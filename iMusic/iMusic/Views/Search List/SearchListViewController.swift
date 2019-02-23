@@ -89,9 +89,9 @@ extension SearchListViewController {
      */
     private func configureNavigationBar() {
         customTitleView.titleColor = .white()
-        customTitleView.setTitle("ABA Music")
+        customTitleView.setTitle("iMusic")
         customTitleView.subtitleColor = .white()
-        customTitleView.setSubtitle("ABA English©")
+        customTitleView.setSubtitle("using iTunes© API")
         navigationItem.titleView = customTitleView
     }
     
