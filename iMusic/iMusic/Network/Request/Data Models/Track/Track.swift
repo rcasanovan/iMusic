@@ -24,7 +24,7 @@ public struct TrackResponse: Decodable {
     let artworkUrl100: String
     let releaseDate: String
     let primaryGenreName: String
-    let trackPrice: Float
+    let trackPrice: Float?
     let trackTimeMillis: Int
     
 }
