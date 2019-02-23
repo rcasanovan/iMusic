@@ -43,6 +43,7 @@
 		C86CB6E32221F2270029D757 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E22221F2270029D757 /* ImageManager.swift */; };
 		C86CB6E62221F2500029D757 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E52221F2500029D757 /* ImageManagerTests.swift */; };
 		C86CB6E92221F2AF0029D757 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E82221F2AF0029D757 /* String.swift */; };
+		C86CB6F02221F3BC0029D757 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6EF2221F3BC0029D757 /* BaseViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		C86CB6E22221F2270029D757 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 		C86CB6E52221F2500029D757 /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
 		C86CB6E82221F2AF0029D757 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		C86CB6EF2221F3BC0029D757 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -381,6 +383,7 @@
 		C86CB6EA2221F3400029D757 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB6EF2221F3BC0029D757 /* BaseViewController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				C86CB6E32221F2270029D757 /* ImageManager.swift in Sources */,
 				C86CB6B52221EFD80029D757 /* RequestManager.swift in Sources */,
 				C86CB6BB2221EFD80029D757 /* ResultError.swift in Sources */,
+				C86CB6F02221F3BC0029D757 /* BaseViewController.swift in Sources */,
 				C86CB6A42221EEF90029D757 /* ReachabilityManager.swift in Sources */,
 				C86CB67B2221EC430029D757 /* ViewController.swift in Sources */,
 				C86CB6DE2221F1A00029D757 /* SearchSuggestionsManager.swift in Sources */,
