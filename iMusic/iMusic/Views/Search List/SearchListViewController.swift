@@ -243,7 +243,31 @@ extension SearchListViewController {
 extension SearchListViewController {
     
     @objc private func sortButtonPressed() {
+        showSortOptions()
+    }
+    
+    
+    private func showSortOptions() {
+        let alertController = UIAlertController(
+            title: "Sort results options",
+            message: nil,
+            preferredStyle: .actionSheet)
         
+        alertController.addAction(UIAlertAction(title: "By song length", style: .default, handler: { (action) in
+            print("sort by length")
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "By genre", style: .default, handler: { (action) in
+            print("sort by genre")
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "By price", style: .default, handler: { (action) in
+            print("sort by price")
+        }))
+        
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        
+        present(alertController, animated: true, completion: nil)
     }
     
 }
