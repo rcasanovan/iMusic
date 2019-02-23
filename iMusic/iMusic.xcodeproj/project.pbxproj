@@ -235,7 +235,7 @@
 				C86CB6EB2221F3480029D757 /* Common */,
 				C86CB6EC2221F3560029D757 /* Search List */,
 				C86CB6ED2221F3600029D757 /* Track Detail */,
-				C86CB6EE2221F37B0029D757 /* Genetal Message */,
+				C86CB6EE2221F37B0029D757 /* General Message */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,14 +461,14 @@
 			path = "Track Detail";
 			sourceTree = "<group>";
 		};
-		C86CB6EE2221F37B0029D757 /* Genetal Message */ = {
+		C86CB6EE2221F37B0029D757 /* General Message */ = {
 			isa = PBXGroup;
 			children = (
 				C86CB70E2221F59F0029D757 /* GeneralMessageProtocols.swift */,
 				C86CB70D2221F59F0029D757 /* GeneralMessageViewController.swift */,
 				C86CB70F2221F59F0029D757 /* GeneralMessagePresenter.swift */,
 			);
-			path = "Genetal Message";
+			path = "General Message";
 			sourceTree = "<group>";
 		};
 		C86CB6F12221F3E10029D757 /* Suggestions View */ = {
