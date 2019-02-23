@@ -51,7 +51,7 @@ class TrackManager {
     }
     
     public func getTrackTimemmssFormatWith(trackTimeMillis: Int) -> String {
-        return ""
+        return trackTimeMillis.msToSeconds.minuteSecond
     }
     
 }

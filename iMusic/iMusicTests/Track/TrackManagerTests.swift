@@ -33,4 +33,9 @@ class TrackManagerTests: XCTestCase {
         XCTAssert(artworkUrlExtraLarge100x100?.absoluteString == "https://is3-ssl.mzstatic.com/image/thumb/Video118/v4/6b/2f/f1/6b2ff173-f5d6-30dc-300c-4eeb50010d03/source/200x200bb.jpg")
     }
     
+    func testTrackTimemmssFormat() {
+        let trackTimemmssFormat = TrackManager.shared.getTrackTimemmssFormatWith(trackTimeMillis: 243027)
+        XCTAssert(trackTimemmssFormat == "4:03")
+    }
+    
 }

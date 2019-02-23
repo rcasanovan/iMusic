@@ -53,7 +53,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
         configureArtWorkWithUrl(viewModel.artworkUrl)
         trackNameLabel.text = viewModel.trackName
         releaseDateLabel.text = viewModel.releaseYear
-        trackInformationLabel.text = "2:30 - 1.99 €"
+        trackInformationLabel.text = "\(viewModel.trackDuration) - 1.99 €"
     }
     
 }

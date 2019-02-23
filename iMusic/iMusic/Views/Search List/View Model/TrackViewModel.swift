@@ -18,8 +18,9 @@ struct TrackViewModel {
     let previewUrl: URL?
     let primaryGenreName: String
     let trackViewUrl: URL?
+    let trackDuration: String
     
-    init(artistName: String, trackName: String, artworkUrl: URL?, releaseDate: String, releaseYear: String, previewUrl: URL?, primaryGenreName: String, trackViewUrl: URL?) {
+    init(artistName: String, trackName: String, artworkUrl: URL?, releaseDate: String, releaseYear: String, previewUrl: URL?, primaryGenreName: String, trackViewUrl: URL?, trackDuration: String) {
         self.artistName = artistName
         self.trackName = trackName
         self.artworkUrl = artworkUrl
@@ -28,6 +29,7 @@ struct TrackViewModel {
         self.previewUrl = previewUrl
         self.primaryGenreName = primaryGenreName
         self.trackViewUrl = trackViewUrl
+        self.trackDuration = trackDuration
     }
     
 }
@@ -66,7 +68,9 @@ extension TrackViewModel {
         
         let trackViewUrl = URL(string: artistResponse.trackViewUrl)
         
-        return TrackViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName, trackViewUrl: trackViewUrl)
+        let trackDuration = TrackManager.shared.getTrackTimemmssFormatWith(trackTimeMillis: artistResponse.trackTimeMillis)
+        
+        return TrackViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName, trackViewUrl: trackViewUrl, trackDuration: trackDuration)
     }
     
 }
