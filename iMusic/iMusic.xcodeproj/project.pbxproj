@@ -10,8 +10,6 @@
 		0796B9EEA41F140C07B5A1F5 /* Pods_iMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EE340D8BBA2C7964DE882E6 /* Pods_iMusic.framework */; };
 		BA852F33285F4137C5CB7D9C /* Pods_iMusicTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 366778E00E7FCB5B68CEE96D /* Pods_iMusicTests.framework */; };
 		C86CB6792221EC430029D757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6782221EC430029D757 /* AppDelegate.swift */; };
-		C86CB67B2221EC430029D757 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB67A2221EC430029D757 /* ViewController.swift */; };
-		C86CB67E2221EC430029D757 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86CB67C2221EC430029D757 /* Main.storyboard */; };
 		C86CB6802221EC450029D757 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86CB67F2221EC450029D757 /* Assets.xcassets */; };
 		C86CB6832221EC450029D757 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6812221EC450029D757 /* LaunchScreen.storyboard */; };
 		C86CB68E2221EC450029D757 /* iMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB68D2221EC450029D757 /* iMusicTests.swift */; };
@@ -88,8 +86,6 @@
 		AA05270CB6B3B55EABD099FA /* Pods-iMusicTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.release.xcconfig"; sourceTree = "<group>"; };
 		C86CB6752221EC430029D757 /* iMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86CB6782221EC430029D757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C86CB67A2221EC430029D757 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C86CB67D2221EC430029D757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C86CB67F2221EC450029D757 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C86CB6822221EC450029D757 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C86CB6842221EC450029D757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -208,8 +204,6 @@
 			children = (
 				C86CB69E2221EE870029D757 /* iMusic-Bridging-Header.h */,
 				C86CB6782221EC430029D757 /* AppDelegate.swift */,
-				C86CB67A2221EC430029D757 /* ViewController.swift */,
-				C86CB67C2221EC430029D757 /* Main.storyboard */,
 				C86CB6982221EDEA0029D757 /* Views */,
 				C86CB6A52221EFD80029D757 /* Network */,
 				C86CB69B2221EE140029D757 /* Managers */,
@@ -706,7 +700,6 @@
 				C86CB6D12221F0800029D757 /* InterUI-MediumItalic.ttf in Resources */,
 				C86CB6D52221F0800029D757 /* InterUI-Regular.ttf in Resources */,
 				C86CB6802221EC450029D757 /* Assets.xcassets in Resources */,
-				C86CB67E2221EC430029D757 /* Main.storyboard in Resources */,
 				C86CB6CE2221F0800029D757 /* Tracks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -839,7 +832,6 @@
 				C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */,
 				C86CB7292221F7DD0029D757 /* SearchListDatasource.swift in Sources */,
 				C86CB7062221F4CF0029D757 /* SearchView.swift in Sources */,
-				C86CB67B2221EC430029D757 /* ViewController.swift in Sources */,
 				C86CB6F82221F3F90029D757 /* SuggestionTableViewCell.swift in Sources */,
 				C86CB72B2221F7DD0029D757 /* SearchListPresenter.swift in Sources */,
 				C86CB6DE2221F1A00029D757 /* SearchSuggestionsManager.swift in Sources */,
@@ -896,14 +888,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C86CB67C2221EC430029D757 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C86CB67D2221EC430029D757 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C86CB6812221EC450029D757 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1039,6 +1023,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5753N2Y6RP;
 				INFOPLIST_FILE = iMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1059,6 +1044,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5753N2Y6RP;
 				INFOPLIST_FILE = iMusic/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
