@@ -66,8 +66,9 @@ extension SearchListViewController {
     private func configureSubviews() {
         searchView.delegate = self
         
-        sortButton.setBackgroundImage(UIImage(named: "CancelButton"), for: .normal)
-        sortButton.setBackgroundImage(UIImage(named: "CancelButtonPressed"), for: .selected)
+        sortButton.setTitle("Sort", for: .normal)
+        sortButton.titleLabel?.font = UIFont.mediumWithSize(size: 15.0)
+        sortButton.setTitleColor(.white(), for: .normal)
         sortButton.addTarget(self, action: #selector(sortButtonPressed), for: .touchUpInside)
         
         suggestionsView.isHidden = true
@@ -198,7 +199,7 @@ extension SearchListViewController {
         searchListContainerView.addConstraintsWithFormat("H:|[v0]|", views: noResultsLabel)
         searchListContainerView.addConstraintsWithFormat("V:[v0(\(Layout.NoResultsLabel.height))]", views: noResultsLabel)
         
-        view.addConstraintsWithFormat("H:|[v0]-5.0-[v1]-16.0-|", views: searchView, sortButton)
+        view.addConstraintsWithFormat("H:|[v0]-5.0-[v1(80.0)]-16.0-|", views: searchView, sortButton)
         view.addConstraintsWithFormat("V:|[v0(\(searchView.height))]", views: searchView)
         
         view.addConstraintsWithFormat("V:|-7.5-[v0(31.0)]", views: sortButton)
