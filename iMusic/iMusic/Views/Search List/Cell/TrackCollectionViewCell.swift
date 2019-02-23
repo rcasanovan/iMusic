@@ -37,6 +37,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
         trackImageView.image = nil
         trackNameLabel.text = ""
         releaseDateLabel.text = ""
+        trackInformationLabel.text = ""
     }
     
     static func getHeight(for width: CGFloat) -> CGFloat {
@@ -53,7 +54,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
         configureArtWorkWithUrl(viewModel.artworkUrl)
         trackNameLabel.text = viewModel.trackName
         releaseDateLabel.text = viewModel.releaseYear
-        trackInformationLabel.text = "\(viewModel.trackDuration) - 1.99 €"
+        configureTrackInformationWith(viewModel)
     }
     
 }
@@ -65,6 +66,15 @@ extension TrackCollectionViewCell {
             return
         }
         trackImageView.hnk_setImage(from: url, placeholder: nil)
+    }
+    
+    private func configureTrackInformationWith(_ viewModel: TrackViewModel) {
+        guard let price = viewModel.trackPrice else {
+            trackInformationLabel.text = "\(viewModel.trackDuration)"
+            return
+        }
+        
+        trackInformationLabel.text = "\(viewModel.trackDuration) - \(price)"
     }
     
 }
