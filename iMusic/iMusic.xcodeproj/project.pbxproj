@@ -40,6 +40,9 @@
 		C86CB6D92221F1450029D757 /* SuggestionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6D82221F1450029D757 /* SuggestionsTests.swift */; };
 		C86CB6DE2221F1A00029D757 /* SearchSuggestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6DB2221F1A00029D757 /* SearchSuggestionsManager.swift */; };
 		C86CB6DF2221F1A00029D757 /* SearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6DD2221F1A00029D757 /* SearchSuggestion.swift */; };
+		C86CB6E32221F2270029D757 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E22221F2270029D757 /* ImageManager.swift */; };
+		C86CB6E62221F2500029D757 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E52221F2500029D757 /* ImageManagerTests.swift */; };
+		C86CB6E92221F2AF0029D757 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E82221F2AF0029D757 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +98,9 @@
 		C86CB6D82221F1450029D757 /* SuggestionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsTests.swift; sourceTree = "<group>"; };
 		C86CB6DB2221F1A00029D757 /* SearchSuggestionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsManager.swift; sourceTree = "<group>"; };
 		C86CB6DD2221F1A00029D757 /* SearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestion.swift; sourceTree = "<group>"; };
+		C86CB6E22221F2270029D757 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		C86CB6E52221F2500029D757 /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
+		C86CB6E82221F2AF0029D757 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +175,7 @@
 		C86CB68C2221EC450029D757 /* iMusicTests */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB6E42221F23D0029D757 /* Image */,
 				C86CB6D72221F12F0029D757 /* Suggestions */,
 				C86CB6BF2221F0380029D757 /* Network */,
 				C86CB68D2221EC450029D757 /* iMusicTests.swift */,
@@ -187,6 +194,7 @@
 		C86CB69B2221EE140029D757 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB6E02221F2110029D757 /* Image Manager */,
 				C86CB6DA2221F1750029D757 /* Search Suggestions Manager */,
 				C86CB69F2221EEF80029D757 /* Reachability Manager */,
 			);
@@ -196,6 +204,7 @@
 		C86CB69C2221EE240029D757 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB6E72221F2A20029D757 /* String */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -338,6 +347,30 @@
 				C86CB6DD2221F1A00029D757 /* SearchSuggestion.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		C86CB6E02221F2110029D757 /* Image Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB6E22221F2270029D757 /* ImageManager.swift */,
+			);
+			path = "Image Manager";
+			sourceTree = "<group>";
+		};
+		C86CB6E42221F23D0029D757 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB6E52221F2500029D757 /* ImageManagerTests.swift */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		C86CB6E72221F2A20029D757 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB6E82221F2AF0029D757 /* String.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
@@ -569,6 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C86CB6B92221EFD80029D757 /* RequestProtocol.swift in Sources */,
+				C86CB6E32221F2270029D757 /* ImageManager.swift in Sources */,
 				C86CB6B52221EFD80029D757 /* RequestManager.swift in Sources */,
 				C86CB6BB2221EFD80029D757 /* ResultError.swift in Sources */,
 				C86CB6A42221EEF90029D757 /* ReachabilityManager.swift in Sources */,
@@ -579,6 +613,7 @@
 				C86CB6B62221EFD80029D757 /* HTTPCode.swift in Sources */,
 				C86CB6BA2221EFD80029D757 /* RequestErrors.swift in Sources */,
 				C86CB6B72221EFD80029D757 /* NetworkHeaders.swift in Sources */,
+				C86CB6E92221F2AF0029D757 /* String.swift in Sources */,
 				C86CB6BD2221EFD80029D757 /* Track.swift in Sources */,
 				C86CB6B82221EFD80029D757 /* Result.swift in Sources */,
 				C86CB6792221EC430029D757 /* AppDelegate.swift in Sources */,
@@ -594,6 +629,7 @@
 				C86CB6C12221F04B0029D757 /* NetworkTests.swift in Sources */,
 				C86CB6D92221F1450029D757 /* SuggestionsTests.swift in Sources */,
 				C86CB68E2221EC450029D757 /* iMusicTests.swift in Sources */,
+				C86CB6E62221F2500029D757 /* ImageManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
