@@ -27,6 +27,16 @@
 		C86CB6BC2221EFD80029D757 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6AF2221EFD80029D757 /* EndPoint.swift */; };
 		C86CB6BD2221EFD80029D757 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6B32221EFD80029D757 /* Track.swift */; };
 		C86CB6BE2221EFD80029D757 /* TracksRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6B42221EFD80029D757 /* TracksRequest.swift */; };
+		C86CB6C12221F04B0029D757 /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6C02221F04B0029D757 /* NetworkTests.swift */; };
+		C86CB6CE2221F0800029D757 /* Tracks.json in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6C42221F0800029D757 /* Tracks.json */; };
+		C86CB6CF2221F0800029D757 /* InterUI-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6C62221F0800029D757 /* InterUI-Bold.ttf */; };
+		C86CB6D02221F0800029D757 /* InterUI-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6C72221F0800029D757 /* InterUI-Black.ttf */; };
+		C86CB6D12221F0800029D757 /* InterUI-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6C82221F0800029D757 /* InterUI-MediumItalic.ttf */; };
+		C86CB6D22221F0800029D757 /* InterUI-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6C92221F0800029D757 /* InterUI-BlackItalic.ttf */; };
+		C86CB6D32221F0800029D757 /* InterUI-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6CA2221F0800029D757 /* InterUI-BoldItalic.ttf */; };
+		C86CB6D42221F0800029D757 /* InterUI-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6CB2221F0800029D757 /* InterUI-Medium.ttf */; };
+		C86CB6D52221F0800029D757 /* InterUI-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6CC2221F0800029D757 /* InterUI-Regular.ttf */; };
+		C86CB6D62221F0800029D757 /* InterUI-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C86CB6CD2221F0800029D757 /* InterUI-Italic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +79,16 @@
 		C86CB6AF2221EFD80029D757 /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		C86CB6B32221EFD80029D757 /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		C86CB6B42221EFD80029D757 /* TracksRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TracksRequest.swift; sourceTree = "<group>"; };
+		C86CB6C02221F04B0029D757 /* NetworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
+		C86CB6C42221F0800029D757 /* Tracks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Tracks.json; sourceTree = "<group>"; };
+		C86CB6C62221F0800029D757 /* InterUI-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Bold.ttf"; sourceTree = "<group>"; };
+		C86CB6C72221F0800029D757 /* InterUI-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Black.ttf"; sourceTree = "<group>"; };
+		C86CB6C82221F0800029D757 /* InterUI-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-MediumItalic.ttf"; sourceTree = "<group>"; };
+		C86CB6C92221F0800029D757 /* InterUI-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-BlackItalic.ttf"; sourceTree = "<group>"; };
+		C86CB6CA2221F0800029D757 /* InterUI-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-BoldItalic.ttf"; sourceTree = "<group>"; };
+		C86CB6CB2221F0800029D757 /* InterUI-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Medium.ttf"; sourceTree = "<group>"; };
+		C86CB6CC2221F0800029D757 /* InterUI-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Regular.ttf"; sourceTree = "<group>"; };
+		C86CB6CD2221F0800029D757 /* InterUI-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InterUI-Italic.ttf"; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +163,7 @@
 		C86CB68C2221EC450029D757 /* iMusicTests */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB6BF2221F0380029D757 /* Network */,
 				C86CB68D2221EC450029D757 /* iMusicTests.swift */,
 				C86CB68F2221EC450029D757 /* Info.plist */,
 			);
@@ -174,6 +195,8 @@
 		C86CB69D2221EE320029D757 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB6C52221F0800029D757 /* Fonts */,
+				C86CB6C22221F0800029D757 /* Simulated Response */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -243,6 +266,45 @@
 				C86CB6B32221EFD80029D757 /* Track.swift */,
 			);
 			path = Track;
+			sourceTree = "<group>";
+		};
+		C86CB6BF2221F0380029D757 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB6C02221F04B0029D757 /* NetworkTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C86CB6C22221F0800029D757 /* Simulated Response */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB6C32221F0800029D757 /* Tracks */,
+			);
+			path = "Simulated Response";
+			sourceTree = "<group>";
+		};
+		C86CB6C32221F0800029D757 /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB6C42221F0800029D757 /* Tracks.json */,
+			);
+			path = Tracks;
+			sourceTree = "<group>";
+		};
+		C86CB6C52221F0800029D757 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB6C62221F0800029D757 /* InterUI-Bold.ttf */,
+				C86CB6C72221F0800029D757 /* InterUI-Black.ttf */,
+				C86CB6C82221F0800029D757 /* InterUI-MediumItalic.ttf */,
+				C86CB6C92221F0800029D757 /* InterUI-BlackItalic.ttf */,
+				C86CB6CA2221F0800029D757 /* InterUI-BoldItalic.ttf */,
+				C86CB6CB2221F0800029D757 /* InterUI-Medium.ttf */,
+				C86CB6CC2221F0800029D757 /* InterUI-Regular.ttf */,
+				C86CB6CD2221F0800029D757 /* InterUI-Italic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
@@ -341,9 +403,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86CB6CF2221F0800029D757 /* InterUI-Bold.ttf in Resources */,
+				C86CB6D62221F0800029D757 /* InterUI-Italic.ttf in Resources */,
+				C86CB6D02221F0800029D757 /* InterUI-Black.ttf in Resources */,
 				C86CB6832221EC450029D757 /* LaunchScreen.storyboard in Resources */,
+				C86CB6D32221F0800029D757 /* InterUI-BoldItalic.ttf in Resources */,
+				C86CB6D42221F0800029D757 /* InterUI-Medium.ttf in Resources */,
+				C86CB6D22221F0800029D757 /* InterUI-BlackItalic.ttf in Resources */,
+				C86CB6D12221F0800029D757 /* InterUI-MediumItalic.ttf in Resources */,
+				C86CB6D52221F0800029D757 /* InterUI-Regular.ttf in Resources */,
 				C86CB6802221EC450029D757 /* Assets.xcassets in Resources */,
 				C86CB67E2221EC430029D757 /* Main.storyboard in Resources */,
+				C86CB6CE2221F0800029D757 /* Tracks.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86CB6C12221F04B0029D757 /* NetworkTests.swift in Sources */,
 				C86CB68E2221EC450029D757 /* iMusicTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
