@@ -14,6 +14,8 @@ class SearchListViewController: BaseViewController {
     
     private let customTitleView: CustomTitleView = CustomTitleView()
     private let searchView: SearchView = SearchView()
+    private let sortButton: UIButton = UIButton(type: .custom)
+    private var sortButtonWidthConstraint: NSLayoutConstraint?
     private let noResultsLabel: UILabel = UILabel()
     private let searchListContainerView: UIView = UIView()
     private var searchListCollectionView: UICollectionView?
@@ -63,6 +65,10 @@ extension SearchListViewController {
      */
     private func configureSubviews() {
         searchView.delegate = self
+        
+        sortButton.setBackgroundImage(UIImage(named: "CancelButton"), for: .normal)
+        sortButton.setBackgroundImage(UIImage(named: "CancelButtonPressed"), for: .selected)
+        sortButton.addTarget(self, action: #selector(sortButtonPressed), for: .touchUpInside)
         
         suggestionsView.isHidden = true
         suggestionsView.delegate = self
@@ -180,6 +186,7 @@ extension SearchListViewController {
      */
     private func addSubviews() {
         view.addSubview(searchView)
+        view.addSubview(sortButton)
         view.addSubview(searchListContainerView)
         view.addSubview(suggestionsView)
         searchListContainerView.addSubview(noResultsLabel)
@@ -191,8 +198,10 @@ extension SearchListViewController {
         searchListContainerView.addConstraintsWithFormat("H:|[v0]|", views: noResultsLabel)
         searchListContainerView.addConstraintsWithFormat("V:[v0(\(Layout.NoResultsLabel.height))]", views: noResultsLabel)
         
-        view.addConstraintsWithFormat("H:|[v0]|", views: searchView)
+        view.addConstraintsWithFormat("H:|[v0]-5.0-[v1]-16.0-|", views: searchView, sortButton)
         view.addConstraintsWithFormat("V:|[v0(\(searchView.height))]", views: searchView)
+        
+        view.addConstraintsWithFormat("V:|-7.5-[v0(31.0)]", views: sortButton)
         
         view.addConstraintsWithFormat("H:|[v0]|", views: searchListContainerView)
         view.addConstraintsWithFormat("V:[v0]-10.0-[v1]|", views: searchView, searchListContainerView)
@@ -225,6 +234,15 @@ extension SearchListViewController {
         UIView.animate(withDuration: animateDuration) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+}
+
+// MARK: - User actions
+extension SearchListViewController {
+    
+    @objc private func sortButtonPressed() {
+        
     }
     
 }
