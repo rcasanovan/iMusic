@@ -40,8 +40,7 @@
 		C86CB6D92221F1450029D757 /* SuggestionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6D82221F1450029D757 /* SuggestionsTests.swift */; };
 		C86CB6DE2221F1A00029D757 /* SearchSuggestionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6DB2221F1A00029D757 /* SearchSuggestionsManager.swift */; };
 		C86CB6DF2221F1A00029D757 /* SearchSuggestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6DD2221F1A00029D757 /* SearchSuggestion.swift */; };
-		C86CB6E32221F2270029D757 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E22221F2270029D757 /* ImageManager.swift */; };
-		C86CB6E62221F2500029D757 /* ImageManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E52221F2500029D757 /* ImageManagerTests.swift */; };
+		C86CB6E62221F2500029D757 /* TrackManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E52221F2500029D757 /* TrackManagerTests.swift */; };
 		C86CB6E92221F2AF0029D757 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6E82221F2AF0029D757 /* String.swift */; };
 		C86CB6F02221F3BC0029D757 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6EF2221F3BC0029D757 /* BaseViewController.swift */; };
 		C86CB6F82221F3F90029D757 /* SuggestionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6F32221F3F90029D757 /* SuggestionTableViewCell.swift */; };
@@ -67,6 +66,7 @@
 		C86CB72B2221F7DD0029D757 /* SearchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7252221F7DD0029D757 /* SearchListPresenter.swift */; };
 		C86CB72C2221F7DD0029D757 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7262221F7DD0029D757 /* SearchListViewController.swift */; };
 		C86CB72D2221F7DD0029D757 /* SearchListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */; };
+		C86CB730222202260029D757 /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB72F222202260029D757 /* TrackManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,8 +122,7 @@
 		C86CB6D82221F1450029D757 /* SuggestionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsTests.swift; sourceTree = "<group>"; };
 		C86CB6DB2221F1A00029D757 /* SearchSuggestionsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestionsManager.swift; sourceTree = "<group>"; };
 		C86CB6DD2221F1A00029D757 /* SearchSuggestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSuggestion.swift; sourceTree = "<group>"; };
-		C86CB6E22221F2270029D757 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
-		C86CB6E52221F2500029D757 /* ImageManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManagerTests.swift; sourceTree = "<group>"; };
+		C86CB6E52221F2500029D757 /* TrackManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackManagerTests.swift; sourceTree = "<group>"; };
 		C86CB6E82221F2AF0029D757 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		C86CB6EF2221F3BC0029D757 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		C86CB6F32221F3F90029D757 /* SuggestionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionTableViewCell.swift; sourceTree = "<group>"; };
@@ -149,6 +148,7 @@
 		C86CB7252221F7DD0029D757 /* SearchListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListPresenter.swift; sourceTree = "<group>"; };
 		C86CB7262221F7DD0029D757 /* SearchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
 		C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListProtocols.swift; sourceTree = "<group>"; };
+		C86CB72F222202260029D757 /* TrackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackManager.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,7 +223,7 @@
 		C86CB68C2221EC450029D757 /* iMusicTests */ = {
 			isa = PBXGroup;
 			children = (
-				C86CB6E42221F23D0029D757 /* Image */,
+				C86CB6E42221F23D0029D757 /* Track */,
 				C86CB6D72221F12F0029D757 /* Suggestions */,
 				C86CB6BF2221F0380029D757 /* Network */,
 				C86CB68D2221EC450029D757 /* iMusicTests.swift */,
@@ -247,7 +247,7 @@
 		C86CB69B2221EE140029D757 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				C86CB6E02221F2110029D757 /* Image Manager */,
+				C86CB72E222202150029D757 /* Track Manager */,
 				C86CB6DA2221F1750029D757 /* Search Suggestions Manager */,
 				C86CB69F2221EEF80029D757 /* Reachability Manager */,
 			);
@@ -407,20 +407,12 @@
 			path = "Data Models";
 			sourceTree = "<group>";
 		};
-		C86CB6E02221F2110029D757 /* Image Manager */ = {
+		C86CB6E42221F23D0029D757 /* Track */ = {
 			isa = PBXGroup;
 			children = (
-				C86CB6E22221F2270029D757 /* ImageManager.swift */,
+				C86CB6E52221F2500029D757 /* TrackManagerTests.swift */,
 			);
-			path = "Image Manager";
-			sourceTree = "<group>";
-		};
-		C86CB6E42221F23D0029D757 /* Image */ = {
-			isa = PBXGroup;
-			children = (
-				C86CB6E52221F2500029D757 /* ImageManagerTests.swift */,
-			);
-			path = Image;
+			path = Track;
 			sourceTree = "<group>";
 		};
 		C86CB6E72221F2A20029D757 /* String */ = {
@@ -587,6 +579,14 @@
 				C86CB7202221F7980029D757 /* UIEdgeInsets.swift */,
 			);
 			path = UIEdgeInsets;
+			sourceTree = "<group>";
+		};
+		C86CB72E222202150029D757 /* Track Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB72F222202260029D757 /* TrackManager.swift */,
+			);
+			path = "Track Manager";
 			sourceTree = "<group>";
 		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
@@ -820,7 +820,6 @@
 				C86CB6FF2221F4620029D757 /* CustomTitleView.swift in Sources */,
 				C86CB6B92221EFD80029D757 /* RequestProtocol.swift in Sources */,
 				C86CB6FB2221F3F90029D757 /* SuggestionViewModel.swift in Sources */,
-				C86CB6E32221F2270029D757 /* ImageManager.swift in Sources */,
 				C86CB6B52221EFD80029D757 /* RequestManager.swift in Sources */,
 				C86CB6BB2221EFD80029D757 /* ResultError.swift in Sources */,
 				C86CB7102221F59F0029D757 /* GeneralMessageViewController.swift in Sources */,
@@ -833,6 +832,7 @@
 				C86CB6F82221F3F90029D757 /* SuggestionTableViewCell.swift in Sources */,
 				C86CB72B2221F7DD0029D757 /* SearchListPresenter.swift in Sources */,
 				C86CB6DE2221F1A00029D757 /* SearchSuggestionsManager.swift in Sources */,
+				C86CB730222202260029D757 /* TrackManager.swift in Sources */,
 				C86CB6F92221F3F90029D757 /* SuggestionsView.swift in Sources */,
 				C86CB6A32221EEF90029D757 /* Reachability.m in Sources */,
 				C86CB71E2221F75B0029D757 /* Date.swift in Sources */,
@@ -869,7 +869,7 @@
 				C86CB6C12221F04B0029D757 /* NetworkTests.swift in Sources */,
 				C86CB6D92221F1450029D757 /* SuggestionsTests.swift in Sources */,
 				C86CB68E2221EC450029D757 /* iMusicTests.swift in Sources */,
-				C86CB6E62221F2500029D757 /* ImageManagerTests.swift in Sources */,
+				C86CB6E62221F2500029D757 /* TrackManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

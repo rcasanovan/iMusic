@@ -51,7 +51,7 @@ extension TrackViewModel {
      *      -artistResponse: the track response
      */
     private static func getViewModelWith(_ artistResponse: TrackResponse) -> TrackViewModel {
-        let artworkUrl = ImageManager.shared.getExtraLargeUrlWith(URL(string: artistResponse.artworkUrl100), type: .large)
+        let artworkUrl = TrackManager.shared.getExtraLargeUrlWith(URL(string: artistResponse.artworkUrl100), type: .large)
         var releaseYear = ""
         var date = ""
         if let releaseDate = Date.getISODateWithString(artistResponse.releaseDate) {

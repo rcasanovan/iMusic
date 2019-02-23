@@ -1,5 +1,5 @@
 //
-//  ImageManager.swift
+//  TrackManager.swift
 //  iMusic
 //
 //  Created by Ricardo Casanova on 23/02/2019.
@@ -14,9 +14,9 @@ enum ImageType {
     case large
 }
 
-class ImageManager {
+class TrackManager {
     
-    static let shared: ImageManager = { return ImageManager() }()
+    static let shared: TrackManager = { return TrackManager() }()
     
     /**
      * Internal struct for url
@@ -51,3 +51,4 @@ class ImageManager {
     }
     
 }
+
