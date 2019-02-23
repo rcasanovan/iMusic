@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ABA_Music
+@testable import iMusic
 
 typealias tracksCompletionBlock = (Result<TracksResponse?>) -> Void
 
