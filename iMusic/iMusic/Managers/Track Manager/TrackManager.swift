@@ -50,5 +50,9 @@ class TrackManager {
         return URL(string: urlString)
     }
     
+    public func getTrackTimemmssFormatWith(trackTimeMillis: Int) -> String {
+        return ""
+    }
+    
 }
 
