@@ -48,6 +48,7 @@
 		C86CB6F92221F3F90029D757 /* SuggestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6F42221F3F90029D757 /* SuggestionsView.swift */; };
 		C86CB6FA2221F3F90029D757 /* SuggestionsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6F52221F3F90029D757 /* SuggestionsDatasource.swift */; };
 		C86CB6FB2221F3F90029D757 /* SuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6F72221F3F90029D757 /* SuggestionViewModel.swift */; };
+		C86CB6FF2221F4620029D757 /* CustomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6FE2221F4620029D757 /* CustomTitleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +112,7 @@
 		C86CB6F42221F3F90029D757 /* SuggestionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsView.swift; sourceTree = "<group>"; };
 		C86CB6F52221F3F90029D757 /* SuggestionsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsDatasource.swift; sourceTree = "<group>"; };
 		C86CB6F72221F3F90029D757 /* SuggestionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewModel.swift; sourceTree = "<group>"; };
+		C86CB6FE2221F4620029D757 /* CustomTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleView.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -399,6 +401,7 @@
 		C86CB6EB2221F3480029D757 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB6FC2221F44C0029D757 /* Custom Title View */,
 				C86CB6F12221F3E10029D757 /* Suggestions View */,
 			);
 			path = Common;
@@ -450,6 +453,14 @@
 				C86CB6F72221F3F90029D757 /* SuggestionViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		C86CB6FC2221F44C0029D757 /* Custom Title View */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB6FE2221F4620029D757 /* CustomTitleView.swift */,
+			);
+			path = "Custom Title View";
 			sourceTree = "<group>";
 		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
@@ -680,6 +691,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86CB6FF2221F4620029D757 /* CustomTitleView.swift in Sources */,
 				C86CB6B92221EFD80029D757 /* RequestProtocol.swift in Sources */,
 				C86CB6FB2221F3F90029D757 /* SuggestionViewModel.swift in Sources */,
 				C86CB6E32221F2270029D757 /* ImageManager.swift in Sources */,
