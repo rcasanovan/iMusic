@@ -49,6 +49,7 @@
 		C86CB6FA2221F3F90029D757 /* SuggestionsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6F52221F3F90029D757 /* SuggestionsDatasource.swift */; };
 		C86CB6FB2221F3F90029D757 /* SuggestionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6F72221F3F90029D757 /* SuggestionViewModel.swift */; };
 		C86CB6FF2221F4620029D757 /* CustomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6FE2221F4620029D757 /* CustomTitleView.swift */; };
+		C86CB7032221F4990029D757 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7022221F4990029D757 /* UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		C86CB6F52221F3F90029D757 /* SuggestionsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionsDatasource.swift; sourceTree = "<group>"; };
 		C86CB6F72221F3F90029D757 /* SuggestionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestionViewModel.swift; sourceTree = "<group>"; };
 		C86CB6FE2221F4620029D757 /* CustomTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleView.swift; sourceTree = "<group>"; };
+		C86CB7022221F4990029D757 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +223,7 @@
 		C86CB69C2221EE240029D757 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB7012221F48C0029D757 /* UIView */,
 				C86CB6E72221F2A20029D757 /* String */,
 			);
 			path = Extensions;
@@ -461,6 +464,14 @@
 				C86CB6FE2221F4620029D757 /* CustomTitleView.swift */,
 			);
 			path = "Custom Title View";
+			sourceTree = "<group>";
+		};
+		C86CB7012221F48C0029D757 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB7022221F4990029D757 /* UIView.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
@@ -711,6 +722,7 @@
 				C86CB6E92221F2AF0029D757 /* String.swift in Sources */,
 				C86CB6BD2221EFD80029D757 /* Track.swift in Sources */,
 				C86CB6B82221EFD80029D757 /* Result.swift in Sources */,
+				C86CB7032221F4990029D757 /* UIView.swift in Sources */,
 				C86CB6792221EC430029D757 /* AppDelegate.swift in Sources */,
 				C86CB6BE2221EFD80029D757 /* TracksRequest.swift in Sources */,
 				C86CB6FA2221F3F90029D757 /* SuggestionsDatasource.swift in Sources */,
