@@ -569,6 +569,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pijp.iMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iMusic/iMusic-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -588,6 +589,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pijp.iMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iMusic/iMusic-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -609,6 +611,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pijp.iMusicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iMusic/iMusic-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMusic.app/iMusic";
@@ -631,6 +634,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pijp.iMusicTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "iMusic/iMusic-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMusic.app/iMusic";
