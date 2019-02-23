@@ -53,6 +53,9 @@
 		C86CB7062221F4CF0029D757 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7052221F4CF0029D757 /* SearchView.swift */; };
 		C86CB70A2221F5120029D757 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7092221F5120029D757 /* UIColor.swift */; };
 		C86CB70C2221F51A0029D757 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70B2221F51A0029D757 /* UIFont.swift */; };
+		C86CB7102221F59F0029D757 /* GeneralMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70D2221F59F0029D757 /* GeneralMessageViewController.swift */; };
+		C86CB7112221F59F0029D757 /* GeneralMessageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70E2221F59F0029D757 /* GeneralMessageProtocols.swift */; };
+		C86CB7122221F59F0029D757 /* GeneralMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70F2221F59F0029D757 /* GeneralMessagePresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +124,9 @@
 		C86CB7052221F4CF0029D757 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		C86CB7092221F5120029D757 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C86CB70B2221F51A0029D757 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		C86CB70D2221F59F0029D757 /* GeneralMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageViewController.swift; sourceTree = "<group>"; };
+		C86CB70E2221F59F0029D757 /* GeneralMessageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageProtocols.swift; sourceTree = "<group>"; };
+		C86CB70F2221F59F0029D757 /* GeneralMessagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessagePresenter.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -436,6 +442,9 @@
 		C86CB6EE2221F37B0029D757 /* Genetal Message */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB70E2221F59F0029D757 /* GeneralMessageProtocols.swift */,
+				C86CB70D2221F59F0029D757 /* GeneralMessageViewController.swift */,
+				C86CB70F2221F59F0029D757 /* GeneralMessagePresenter.swift */,
 			);
 			path = "Genetal Message";
 			sourceTree = "<group>";
@@ -741,6 +750,7 @@
 				C86CB6E32221F2270029D757 /* ImageManager.swift in Sources */,
 				C86CB6B52221EFD80029D757 /* RequestManager.swift in Sources */,
 				C86CB6BB2221EFD80029D757 /* ResultError.swift in Sources */,
+				C86CB7102221F59F0029D757 /* GeneralMessageViewController.swift in Sources */,
 				C86CB6F02221F3BC0029D757 /* BaseViewController.swift in Sources */,
 				C86CB6A42221EEF90029D757 /* ReachabilityManager.swift in Sources */,
 				C86CB7062221F4CF0029D757 /* SearchView.swift in Sources */,
@@ -752,9 +762,11 @@
 				C86CB6BC2221EFD80029D757 /* EndPoint.swift in Sources */,
 				C86CB6B62221EFD80029D757 /* HTTPCode.swift in Sources */,
 				C86CB6BA2221EFD80029D757 /* RequestErrors.swift in Sources */,
+				C86CB7112221F59F0029D757 /* GeneralMessageProtocols.swift in Sources */,
 				C86CB6B72221EFD80029D757 /* NetworkHeaders.swift in Sources */,
 				C86CB6E92221F2AF0029D757 /* String.swift in Sources */,
 				C86CB6BD2221EFD80029D757 /* Track.swift in Sources */,
+				C86CB7122221F59F0029D757 /* GeneralMessagePresenter.swift in Sources */,
 				C86CB6B82221EFD80029D757 /* Result.swift in Sources */,
 				C86CB7032221F4990029D757 /* UIView.swift in Sources */,
 				C86CB70A2221F5120029D757 /* UIColor.swift in Sources */,
