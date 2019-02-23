@@ -61,6 +61,12 @@
 		C86CB71B2221F7140029D757 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB71A2221F7140029D757 /* TrackViewModel.swift */; };
 		C86CB71E2221F75B0029D757 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB71D2221F75B0029D757 /* Date.swift */; };
 		C86CB7212221F7980029D757 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7202221F7980029D757 /* UIEdgeInsets.swift */; };
+		C86CB7282221F7DD0029D757 /* SearchListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7222221F7DD0029D757 /* SearchListRouter.swift */; };
+		C86CB7292221F7DD0029D757 /* SearchListDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7232221F7DD0029D757 /* SearchListDatasource.swift */; };
+		C86CB72A2221F7DD0029D757 /* SearchListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7242221F7DD0029D757 /* SearchListInteractor.swift */; };
+		C86CB72B2221F7DD0029D757 /* SearchListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7252221F7DD0029D757 /* SearchListPresenter.swift */; };
+		C86CB72C2221F7DD0029D757 /* SearchListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7262221F7DD0029D757 /* SearchListViewController.swift */; };
+		C86CB72D2221F7DD0029D757 /* SearchListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,6 +143,12 @@
 		C86CB71A2221F7140029D757 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
 		C86CB71D2221F75B0029D757 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		C86CB7202221F7980029D757 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
+		C86CB7222221F7DD0029D757 /* SearchListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListRouter.swift; sourceTree = "<group>"; };
+		C86CB7232221F7DD0029D757 /* SearchListDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListDatasource.swift; sourceTree = "<group>"; };
+		C86CB7242221F7DD0029D757 /* SearchListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListInteractor.swift; sourceTree = "<group>"; };
+		C86CB7252221F7DD0029D757 /* SearchListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListPresenter.swift; sourceTree = "<group>"; };
+		C86CB7262221F7DD0029D757 /* SearchListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListViewController.swift; sourceTree = "<group>"; };
+		C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListProtocols.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -440,6 +452,12 @@
 		C86CB6EC2221F3560029D757 /* Search List */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */,
+				C86CB7262221F7DD0029D757 /* SearchListViewController.swift */,
+				C86CB7232221F7DD0029D757 /* SearchListDatasource.swift */,
+				C86CB7252221F7DD0029D757 /* SearchListPresenter.swift */,
+				C86CB7242221F7DD0029D757 /* SearchListInteractor.swift */,
+				C86CB7222221F7DD0029D757 /* SearchListRouter.swift */,
 				C86CB7132221F6650029D757 /* TrackHeaderView */,
 				C86CB7162221F6B40029D757 /* Cell */,
 				C86CB7192221F7010029D757 /* View Model */,
@@ -809,9 +827,11 @@
 				C86CB6F02221F3BC0029D757 /* BaseViewController.swift in Sources */,
 				C86CB6A42221EEF90029D757 /* ReachabilityManager.swift in Sources */,
 				C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */,
+				C86CB7292221F7DD0029D757 /* SearchListDatasource.swift in Sources */,
 				C86CB7062221F4CF0029D757 /* SearchView.swift in Sources */,
 				C86CB67B2221EC430029D757 /* ViewController.swift in Sources */,
 				C86CB6F82221F3F90029D757 /* SuggestionTableViewCell.swift in Sources */,
+				C86CB72B2221F7DD0029D757 /* SearchListPresenter.swift in Sources */,
 				C86CB6DE2221F1A00029D757 /* SearchSuggestionsManager.swift in Sources */,
 				C86CB6F92221F3F90029D757 /* SuggestionsView.swift in Sources */,
 				C86CB6A32221EEF90029D757 /* Reachability.m in Sources */,
@@ -824,14 +844,18 @@
 				C86CB6E92221F2AF0029D757 /* String.swift in Sources */,
 				C86CB71B2221F7140029D757 /* TrackViewModel.swift in Sources */,
 				C86CB7182221F6C00029D757 /* TrackCollectionViewCell.swift in Sources */,
+				C86CB7282221F7DD0029D757 /* SearchListRouter.swift in Sources */,
 				C86CB6BD2221EFD80029D757 /* Track.swift in Sources */,
 				C86CB7212221F7980029D757 /* UIEdgeInsets.swift in Sources */,
+				C86CB72A2221F7DD0029D757 /* SearchListInteractor.swift in Sources */,
 				C86CB7122221F59F0029D757 /* GeneralMessagePresenter.swift in Sources */,
 				C86CB6B82221EFD80029D757 /* Result.swift in Sources */,
 				C86CB7032221F4990029D757 /* UIView.swift in Sources */,
 				C86CB70A2221F5120029D757 /* UIColor.swift in Sources */,
+				C86CB72D2221F7DD0029D757 /* SearchListProtocols.swift in Sources */,
 				C86CB6792221EC430029D757 /* AppDelegate.swift in Sources */,
 				C86CB70C2221F51A0029D757 /* UIFont.swift in Sources */,
+				C86CB72C2221F7DD0029D757 /* SearchListViewController.swift in Sources */,
 				C86CB6BE2221EFD80029D757 /* TracksRequest.swift in Sources */,
 				C86CB6FA2221F3F90029D757 /* SuggestionsDatasource.swift in Sources */,
 				C86CB6DF2221F1A00029D757 /* SearchSuggestion.swift in Sources */,
