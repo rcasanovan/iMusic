@@ -452,15 +452,15 @@
 		C86CB6EC2221F3560029D757 /* Search List */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB7132221F6650029D757 /* TrackHeaderView */,
+				C86CB7162221F6B40029D757 /* Cell */,
+				C86CB7192221F7010029D757 /* View Model */,
 				C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */,
 				C86CB7262221F7DD0029D757 /* SearchListViewController.swift */,
 				C86CB7232221F7DD0029D757 /* SearchListDatasource.swift */,
 				C86CB7252221F7DD0029D757 /* SearchListPresenter.swift */,
 				C86CB7242221F7DD0029D757 /* SearchListInteractor.swift */,
 				C86CB7222221F7DD0029D757 /* SearchListRouter.swift */,
-				C86CB7132221F6650029D757 /* TrackHeaderView */,
-				C86CB7162221F6B40029D757 /* Cell */,
-				C86CB7192221F7010029D757 /* View Model */,
 			);
 			path = "Search List";
 			sourceTree = "<group>";

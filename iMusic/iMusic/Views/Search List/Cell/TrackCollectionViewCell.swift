@@ -13,6 +13,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
     private let trackImageView: UIImageView = UIImageView()
     private let trackNameLabel: UILabel = UILabel()
     private let releaseDateLabel: UILabel = UILabel()
+    private let trackInformationLabel: UILabel = UILabel()
     
     /**
      * Identifier for reusable cells
@@ -52,6 +53,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
         configureArtWorkWithUrl(viewModel.artworkUrl)
         trackNameLabel.text = viewModel.trackName
         releaseDateLabel.text = viewModel.releaseYear
+        trackInformationLabel.text = "2:30 - 1.99 €"
     }
     
 }
@@ -77,7 +79,7 @@ extension TrackCollectionViewCell {
         
         struct ratio {
             static let width: CGFloat = 100.0
-            static let height: CGFloat = 120.0
+            static let height: CGFloat = 140.0
         }
         
     }
@@ -107,6 +109,9 @@ extension TrackCollectionViewCell {
         
         releaseDateLabel.font = UIFont.mediumWithSize(size: 14.0)
         releaseDateLabel.textColor = .white()
+        
+        trackInformationLabel.font = UIFont.mediumWithSize(size: 14.0)
+        trackInformationLabel.textColor = .white()
     }
     
     /**
@@ -116,6 +121,7 @@ extension TrackCollectionViewCell {
         addSubview(trackImageView)
         addSubview(trackNameLabel)
         addSubview(releaseDateLabel)
+        addSubview(trackInformationLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: trackImageView)
         addConstraintsWithFormat("V:|[v0]-10.0-[v1]", views: trackImageView, trackNameLabel)
@@ -124,7 +130,10 @@ extension TrackCollectionViewCell {
         addConstraintsWithFormat("V:[v0(16.0)]-5.0-[v1]", views: trackNameLabel, releaseDateLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: releaseDateLabel)
-        addConstraintsWithFormat("V:[v0(16.0)]|", views: releaseDateLabel)
+        addConstraintsWithFormat("V:[v0(16.0)]-5.0-[v1]", views: releaseDateLabel, trackInformationLabel)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: trackInformationLabel)
+        addConstraintsWithFormat("V:[v0(16.0)]|", views: trackInformationLabel)
     }
     
 }
