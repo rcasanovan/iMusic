@@ -20,8 +20,9 @@ struct TrackViewModel {
     let trackViewUrl: URL?
     let trackDuration: String
     let trackPrice: String?
+    let collectionName: String
     
-    init(artistName: String, trackName: String, artworkUrl: URL?, releaseDate: String, releaseYear: String, previewUrl: URL?, primaryGenreName: String, trackViewUrl: URL?, trackDuration: String, trackPrice: String?) {
+    init(artistName: String, trackName: String, artworkUrl: URL?, releaseDate: String, releaseYear: String, previewUrl: URL?, primaryGenreName: String, trackViewUrl: URL?, trackDuration: String, trackPrice: String?, collectionName: String) {
         self.artistName = artistName
         self.trackName = trackName
         self.artworkUrl = artworkUrl
@@ -32,6 +33,7 @@ struct TrackViewModel {
         self.trackViewUrl = trackViewUrl
         self.trackDuration = trackDuration
         self.trackPrice = trackPrice
+        self.collectionName = collectionName
     }
     
 }
@@ -77,7 +79,7 @@ extension TrackViewModel {
             trackPrice = "\(price) \(artistResponse.currency)"
         }
         
-        return TrackViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName, trackViewUrl: trackViewUrl, trackDuration: trackDuration, trackPrice: trackPrice)
+        return TrackViewModel(artistName: artistResponse.artistName, trackName: artistResponse.trackName, artworkUrl: artworkUrl, releaseDate: date, releaseYear: releaseYear, previewUrl: previewUrl, primaryGenreName: artistResponse.primaryGenreName, trackViewUrl: trackViewUrl, trackDuration: trackDuration, trackPrice: trackPrice, collectionName: artistResponse.collectionName)
     }
     
 }
