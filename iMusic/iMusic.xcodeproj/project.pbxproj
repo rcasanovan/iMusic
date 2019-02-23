@@ -59,6 +59,7 @@
 		C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7142221F67E0029D757 /* TrackHeaderView.swift */; };
 		C86CB7182221F6C00029D757 /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7172221F6C00029D757 /* TrackCollectionViewCell.swift */; };
 		C86CB71B2221F7140029D757 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB71A2221F7140029D757 /* TrackViewModel.swift */; };
+		C86CB71E2221F75B0029D757 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB71D2221F75B0029D757 /* Date.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		C86CB7142221F67E0029D757 /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
 		C86CB7172221F6C00029D757 /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		C86CB71A2221F7140029D757 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
+		C86CB71D2221F75B0029D757 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,6 +243,7 @@
 		C86CB69C2221EE240029D757 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB71C2221F7500029D757 /* Date */,
 				C86CB7082221F5040029D757 /* UIFont */,
 				C86CB7072221F4FC0029D757 /* UIColor */,
 				C86CB7012221F48C0029D757 /* UIView */,
@@ -549,6 +552,14 @@
 			path = "View Model";
 			sourceTree = "<group>";
 		};
+		C86CB71C2221F7500029D757 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB71D2221F75B0029D757 /* Date.swift */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -793,6 +804,7 @@
 				C86CB6DE2221F1A00029D757 /* SearchSuggestionsManager.swift in Sources */,
 				C86CB6F92221F3F90029D757 /* SuggestionsView.swift in Sources */,
 				C86CB6A32221EEF90029D757 /* Reachability.m in Sources */,
+				C86CB71E2221F75B0029D757 /* Date.swift in Sources */,
 				C86CB6BC2221EFD80029D757 /* EndPoint.swift in Sources */,
 				C86CB6B62221EFD80029D757 /* HTTPCode.swift in Sources */,
 				C86CB6BA2221EFD80029D757 /* RequestErrors.swift in Sources */,
