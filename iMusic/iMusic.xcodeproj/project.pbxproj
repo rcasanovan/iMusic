@@ -51,6 +51,8 @@
 		C86CB6FF2221F4620029D757 /* CustomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB6FE2221F4620029D757 /* CustomTitleView.swift */; };
 		C86CB7032221F4990029D757 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7022221F4990029D757 /* UIView.swift */; };
 		C86CB7062221F4CF0029D757 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7052221F4CF0029D757 /* SearchView.swift */; };
+		C86CB70A2221F5120029D757 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7092221F5120029D757 /* UIColor.swift */; };
+		C86CB70C2221F51A0029D757 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70B2221F51A0029D757 /* UIFont.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		C86CB6FE2221F4620029D757 /* CustomTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleView.swift; sourceTree = "<group>"; };
 		C86CB7022221F4990029D757 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		C86CB7052221F4CF0029D757 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		C86CB7092221F5120029D757 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		C86CB70B2221F51A0029D757 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -225,6 +229,8 @@
 		C86CB69C2221EE240029D757 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB7082221F5040029D757 /* UIFont */,
+				C86CB7072221F4FC0029D757 /* UIColor */,
 				C86CB7012221F48C0029D757 /* UIView */,
 				C86CB6E72221F2A20029D757 /* String */,
 			);
@@ -485,6 +491,22 @@
 			path = "Search View";
 			sourceTree = "<group>";
 		};
+		C86CB7072221F4FC0029D757 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB7092221F5120029D757 /* UIColor.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		C86CB7082221F5040029D757 /* UIFont */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB70B2221F51A0029D757 /* UIFont.swift */,
+			);
+			path = UIFont;
+			sourceTree = "<group>";
+		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -735,7 +757,9 @@
 				C86CB6BD2221EFD80029D757 /* Track.swift in Sources */,
 				C86CB6B82221EFD80029D757 /* Result.swift in Sources */,
 				C86CB7032221F4990029D757 /* UIView.swift in Sources */,
+				C86CB70A2221F5120029D757 /* UIColor.swift in Sources */,
 				C86CB6792221EC430029D757 /* AppDelegate.swift in Sources */,
+				C86CB70C2221F51A0029D757 /* UIFont.swift in Sources */,
 				C86CB6BE2221EFD80029D757 /* TracksRequest.swift in Sources */,
 				C86CB6FA2221F3F90029D757 /* SuggestionsDatasource.swift in Sources */,
 				C86CB6DF2221F1A00029D757 /* SearchSuggestion.swift in Sources */,
