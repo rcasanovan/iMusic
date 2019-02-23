@@ -56,6 +56,7 @@
 		C86CB7102221F59F0029D757 /* GeneralMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70D2221F59F0029D757 /* GeneralMessageViewController.swift */; };
 		C86CB7112221F59F0029D757 /* GeneralMessageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70E2221F59F0029D757 /* GeneralMessageProtocols.swift */; };
 		C86CB7122221F59F0029D757 /* GeneralMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70F2221F59F0029D757 /* GeneralMessagePresenter.swift */; };
+		C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7142221F67E0029D757 /* TrackHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		C86CB70D2221F59F0029D757 /* GeneralMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageViewController.swift; sourceTree = "<group>"; };
 		C86CB70E2221F59F0029D757 /* GeneralMessageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageProtocols.swift; sourceTree = "<group>"; };
 		C86CB70F2221F59F0029D757 /* GeneralMessagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessagePresenter.swift; sourceTree = "<group>"; };
+		C86CB7142221F67E0029D757 /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -428,6 +430,7 @@
 		C86CB6EC2221F3560029D757 /* Search List */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB7132221F6650029D757 /* TrackHeaderView */,
 			);
 			path = "Search List";
 			sourceTree = "<group>";
@@ -514,6 +517,14 @@
 				C86CB70B2221F51A0029D757 /* UIFont.swift */,
 			);
 			path = UIFont;
+			sourceTree = "<group>";
+		};
+		C86CB7132221F6650029D757 /* TrackHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB7142221F67E0029D757 /* TrackHeaderView.swift */,
+			);
+			path = TrackHeaderView;
 			sourceTree = "<group>";
 		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
@@ -753,6 +764,7 @@
 				C86CB7102221F59F0029D757 /* GeneralMessageViewController.swift in Sources */,
 				C86CB6F02221F3BC0029D757 /* BaseViewController.swift in Sources */,
 				C86CB6A42221EEF90029D757 /* ReachabilityManager.swift in Sources */,
+				C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */,
 				C86CB7062221F4CF0029D757 /* SearchView.swift in Sources */,
 				C86CB67B2221EC430029D757 /* ViewController.swift in Sources */,
 				C86CB6F82221F3F90029D757 /* SuggestionTableViewCell.swift in Sources */,
