@@ -43,6 +43,7 @@
 		C86CB6892221EC450029D757 /* iMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86CB68D2221EC450029D757 /* iMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMusicTests.swift; sourceTree = "<group>"; };
 		C86CB68F2221EC450029D757 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86CB69E2221EE870029D757 /* iMusic-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iMusic-Bridging-Header.h"; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +99,7 @@
 		C86CB6772221EC430029D757 /* iMusic */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB69E2221EE870029D757 /* iMusic-Bridging-Header.h */,
 				C86CB6782221EC430029D757 /* AppDelegate.swift */,
 				C86CB67A2221EC430029D757 /* ViewController.swift */,
 				C86CB67C2221EC430029D757 /* Main.storyboard */,
