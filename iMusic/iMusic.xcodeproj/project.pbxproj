@@ -101,6 +101,11 @@
 				C86CB6782221EC430029D757 /* AppDelegate.swift */,
 				C86CB67A2221EC430029D757 /* ViewController.swift */,
 				C86CB67C2221EC430029D757 /* Main.storyboard */,
+				C86CB6982221EDEA0029D757 /* Views */,
+				C86CB69A2221EE050029D757 /* Network */,
+				C86CB69B2221EE140029D757 /* Managers */,
+				C86CB69C2221EE240029D757 /* Extensions */,
+				C86CB69D2221EE320029D757 /* Resources */,
 				C86CB67F2221EC450029D757 /* Assets.xcassets */,
 				C86CB6812221EC450029D757 /* LaunchScreen.storyboard */,
 				C86CB6842221EC450029D757 /* Info.plist */,
@@ -115,6 +120,41 @@
 				C86CB68F2221EC450029D757 /* Info.plist */,
 			);
 			path = iMusicTests;
+			sourceTree = "<group>";
+		};
+		C86CB6982221EDEA0029D757 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C86CB69A2221EE050029D757 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C86CB69B2221EE140029D757 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C86CB69C2221EE240029D757 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C86CB69D2221EE320029D757 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
