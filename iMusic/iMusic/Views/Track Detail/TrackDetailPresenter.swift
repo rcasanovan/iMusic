@@ -16,10 +16,10 @@ class TrackDetailPresenter {
     private let router: TrackDetailRouterDelegate
    
     // MARK - Lifecycle
-    init(view: TrackDetailViewInjection, track: TrackViewModel, navigationController: UINavigationController? = nil) {
+    init(view: TrackDetailViewInjection, track: TrackViewModel, allTracks: [TrackViewModel], navigationController: UINavigationController? = nil) {
         self.view = view
         self.track = track
-        self.interactor = TrackDetailInteractor(track: track)
+        self.interactor = TrackDetailInteractor(track: track, allTracks: allTracks)
         self.router = TrackDetailRouter(navigationController: navigationController)
     }
     

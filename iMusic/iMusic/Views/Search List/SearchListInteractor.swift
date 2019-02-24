@@ -201,7 +201,7 @@ extension SearchListInteractor: SearchListInteractorDelegate {
             tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackDuration > $1.trackDuration })
         case .price:
             dictionary = Dictionary(grouping: tracksViewModel, by: { $0.trackPrice ?? "" })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackPrice > $1.trackPrice })
+            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackPrice ?? "" > $1.trackPrice ?? "" })
         }
         
         return tracks

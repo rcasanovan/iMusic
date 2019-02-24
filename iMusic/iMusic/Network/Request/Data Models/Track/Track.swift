@@ -18,6 +18,7 @@ public struct TracksResponse: Decodable {
 public struct TrackResponse: Decodable {
     
     let artistName: String
+    let trackId: Int
     let trackName: String
     let trackViewUrl: String
     let previewUrl: String?
