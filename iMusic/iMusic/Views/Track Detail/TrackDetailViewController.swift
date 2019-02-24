@@ -13,6 +13,7 @@ class TrackDetailViewController: BaseViewController {
     public var presenter: TrackDetailPresenterDelegate?
     
     private let artworkImageView: UIImageView = UIImageView()
+    private let playerControls: PlayerControls = PlayerControls()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,6 +46,8 @@ extension TrackDetailViewController {
      */
     private func configureSubviews() {
         artworkImageView.frame = CGRect(x: 0.0, y: 0.0, width: 250.0, height: 250.0)
+        
+        playerControls.backgroundColor = .yellow
     }
     
 }
@@ -57,11 +60,17 @@ extension TrackDetailViewController {
      */
     private func addSubviews() {
         view.addSubview(artworkImageView)
+        view.addSubview(playerControls)
         
         view.addConstraintsWithFormat("H:[v0(250.0)]", views: artworkImageView)
         view.addConstraintsWithFormat("V:|-10.0-[v0(250.0)]", views: artworkImageView)
-        let artworkImageViewCenterY = NSLayoutConstraint(item: artworkImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
-        view.addConstraint(artworkImageViewCenterY)
+        let artworkImageViewCenterX = NSLayoutConstraint(item: artworkImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        view.addConstraint(artworkImageViewCenterX)
+        
+        view.addConstraintsWithFormat("H:[v0(\(playerControls.width))]", views: playerControls)
+        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(\(playerControls.height))]", views: artworkImageView, playerControls)
+        let playerControlsCenterX = NSLayoutConstraint(item: playerControls, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        view.addConstraint(playerControlsCenterX)
     }
     
 }

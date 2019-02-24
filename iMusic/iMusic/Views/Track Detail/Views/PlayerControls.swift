@@ -17,6 +17,13 @@ class PlayerControls: UIView {
         return Layout.height
     }
     
+    /**
+     * Get component's width
+     */
+    public var width: CGFloat {
+        return Layout.width
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()
@@ -53,6 +60,7 @@ extension PlayerControls {
     private struct Layout {
         
         static let height: CGFloat = 46.0
+        static let width: CGFloat = 250.0
         
     }
     
