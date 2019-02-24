@@ -13,6 +13,8 @@ class TrackDetailViewController: BaseViewController {
     public var presenter: TrackDetailPresenterDelegate?
     
     private let artworkImageView: UIImageView = UIImageView()
+    private let trackNameLabel: UILabel = UILabel()
+    private let artistNameLabel: UILabel = UILabel()
     private let playerControls: PlayerControls = PlayerControls()
     
     override func viewDidLoad() {
@@ -47,6 +49,14 @@ extension TrackDetailViewController {
     private func configureSubviews() {
         artworkImageView.frame = CGRect(x: 0.0, y: 0.0, width: 250.0, height: 250.0)
         
+        trackNameLabel.font = UIFont.mediumWithSize(size: 18.0)
+        trackNameLabel.textColor = .white()
+        trackNameLabel.textAlignment = .center
+        
+        artistNameLabel.font = UIFont.mediumWithSize(size: 16.0)
+        artistNameLabel.textColor = .lightGray
+        artistNameLabel.textAlignment = .center
+        
         playerControls.backgroundColor = .yellow
     }
     
@@ -60,6 +70,8 @@ extension TrackDetailViewController {
      */
     private func addSubviews() {
         view.addSubview(artworkImageView)
+        view.addSubview(trackNameLabel)
+        view.addSubview(artistNameLabel)
         view.addSubview(playerControls)
         
         view.addConstraintsWithFormat("H:[v0(250.0)]", views: artworkImageView)
@@ -67,8 +79,14 @@ extension TrackDetailViewController {
         let artworkImageViewCenterX = NSLayoutConstraint(item: artworkImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
         view.addConstraint(artworkImageViewCenterX)
         
+        view.addConstraintsWithFormat("H:|-16.0-[v0]-16.0-|", views: trackNameLabel)
+        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(21.0)]", views: artworkImageView, trackNameLabel)
+        
+        view.addConstraintsWithFormat("H:|-16.0-[v0]-16.0-|", views: artistNameLabel)
+        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(21.0)]", views: trackNameLabel, artistNameLabel)
+        
         view.addConstraintsWithFormat("H:[v0(\(playerControls.width))]", views: playerControls)
-        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(\(playerControls.height))]", views: artworkImageView, playerControls)
+        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(\(playerControls.height))]", views: artistNameLabel, playerControls)
         let playerControlsCenterX = NSLayoutConstraint(item: playerControls, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
         view.addConstraint(playerControlsCenterX)
     }
@@ -92,6 +110,8 @@ extension TrackDetailViewController: TrackDetailViewInjection {
     
     func loadTrack(_ track: TrackViewModel) {
         configureArtWorkWithUrl(track.artworkUrl)
+        trackNameLabel.text = track.trackName
+        artistNameLabel.text = track.artistName
     }
     
 }

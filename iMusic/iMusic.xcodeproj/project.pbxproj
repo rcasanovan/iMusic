@@ -72,6 +72,7 @@
 		C86CB73B2222A3AF0029D757 /* TrackDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7372222A3AF0029D757 /* TrackDetailProtocols.swift */; };
 		C86CB73D2222A43A0029D757 /* TrackDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB73C2222A43A0029D757 /* TrackDetailInteractor.swift */; };
 		C86CB7402222ABF30029D757 /* PlayerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB73F2222ABF30029D757 /* PlayerControls.swift */; };
+		C86CB7432222B1D30029D757 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7422222B1D30029D757 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -159,6 +160,7 @@
 		C86CB7372222A3AF0029D757 /* TrackDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailProtocols.swift; sourceTree = "<group>"; };
 		C86CB73C2222A43A0029D757 /* TrackDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailInteractor.swift; sourceTree = "<group>"; };
 		C86CB73F2222ABF30029D757 /* PlayerControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControls.swift; sourceTree = "<group>"; };
+		C86CB7422222B1D30029D757 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -265,6 +267,7 @@
 		C86CB69C2221EE240029D757 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB7412222B1B80029D757 /* UIImage */,
 				C86CB731222203A00029D757 /* TimeInterval */,
 				C86CB71F2221F78E0029D757 /* UIEdgeInsets */,
 				C86CB71C2221F7500029D757 /* Date */,
@@ -620,6 +623,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		C86CB7412222B1B80029D757 /* UIImage */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB7422222B1D30029D757 /* UIImage.swift */,
+			);
+			path = UIImage;
+			sourceTree = "<group>";
+		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -881,6 +892,7 @@
 				C86CB7282221F7DD0029D757 /* SearchListRouter.swift in Sources */,
 				C86CB7402222ABF30029D757 /* PlayerControls.swift in Sources */,
 				C86CB6BD2221EFD80029D757 /* Track.swift in Sources */,
+				C86CB7432222B1D30029D757 /* UIImage.swift in Sources */,
 				C86CB73B2222A3AF0029D757 /* TrackDetailProtocols.swift in Sources */,
 				C86CB7212221F7980029D757 /* UIEdgeInsets.swift in Sources */,
 				C86CB72A2221F7DD0029D757 /* SearchListInteractor.swift in Sources */,
