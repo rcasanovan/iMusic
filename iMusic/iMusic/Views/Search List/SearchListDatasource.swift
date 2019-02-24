@@ -15,22 +15,32 @@ class SearchListDatasource: NSObject {
             //__ This is a little trick.
             //__ I created a dicctionary with keys = $0.dt
             //__ and then I created a sorted keys array.
-            //__ This is to build the sections and add a headerview
-            //__ with the day string.
             //__ Why am I doing this here?
             //__ easy -> to do this logic once :)
-            dictionary = Dictionary(grouping: items, by: { $0.artistName })
+            switch sortType {
+            case .artistName:
+                dictionary = Dictionary(grouping: items, by: { $0.artistName })
+            case .genre:
+                dictionary = Dictionary(grouping: items, by: { $0.primaryGenreName })
+            case .length:
+                dictionary = Dictionary(grouping: items, by: { $0.trackDuration })
+            case .price:
+                dictionary = Dictionary(grouping: items, by: { $0.trackPrice ?? "" })
+            }
             keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
         }
     }
+    
+    public var sortType: SortType
     
     private var dictionary: Dictionary<String, [TrackViewModel]>
     private var keysArray: [String]
     
     public override init() {
         self.items = []
-        dictionary = [:]
-        keysArray = []
+        self.dictionary = [:]
+        self.keysArray = []
+        self.sortType = .artistName
         super.init()
     }
 }
@@ -39,7 +49,16 @@ class SearchListDatasource: NSObject {
 extension SearchListDatasource: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        let dictionary = Dictionary(grouping: items, by: { $0.artistName })
+        switch sortType {
+        case .artistName:
+            dictionary = Dictionary(grouping: items, by: { $0.artistName })
+        case .genre:
+            dictionary = Dictionary(grouping: items, by: { $0.primaryGenreName })
+        case .length:
+            dictionary = Dictionary(grouping: items, by: { $0.trackDuration })
+        case .price:
+            dictionary = Dictionary(grouping: items, by: { $0.trackPrice ?? "" })
+        }
         return dictionary.keys.count
     }
     
@@ -68,7 +87,18 @@ extension SearchListDatasource: UICollectionViewDataSource {
             return UICollectionReusableView()
         }
         let viewModel = elementsPerSection[0]
-        headerView.title = viewModel.artistName
+        
+        switch sortType {
+        case .artistName:
+            headerView.title = viewModel.artistName
+        case .genre:
+            headerView.title = viewModel.primaryGenreName
+        case .length:
+            headerView.title = viewModel.trackDuration
+        case .price:
+            headerView.title = viewModel.trackPrice
+        }
+    
         return headerView
     }
     

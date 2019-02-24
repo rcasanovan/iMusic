@@ -180,4 +180,8 @@ extension SearchListInteractor: SearchListInteractorDelegate {
         return lastSuggestion.suggestion
     }
     
+    func getLocalTracks() -> [TrackViewModel] {
+        return tracksViewModel
+    }
+    
 }

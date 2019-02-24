@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum SortType {
+    case length
+    case genre
+    case price
+    case artistName
+}
+
 class SearchListViewController: BaseViewController {
     
     public var presenter: SearchListPresenterDelegate?
@@ -253,21 +260,33 @@ extension SearchListViewController {
             message: nil,
             preferredStyle: .actionSheet)
         
-        alertController.addAction(UIAlertAction(title: "By song length", style: .default, handler: { (action) in
-            print("sort by length")
+        alertController.addAction(UIAlertAction(title: "By song length", style: .default, handler: { [weak self] (action) in
+            guard let `self` = self else { return }
+            self.sortResultsBy(.length)
         }))
         
-        alertController.addAction(UIAlertAction(title: "By genre", style: .default, handler: { (action) in
-            print("sort by genre")
+        alertController.addAction(UIAlertAction(title: "By genre", style: .default, handler: { [weak self] (action) in
+            guard let `self` = self else { return }
+            self.sortResultsBy(.genre)
         }))
         
-        alertController.addAction(UIAlertAction(title: "By price", style: .default, handler: { (action) in
-            print("sort by price")
+        alertController.addAction(UIAlertAction(title: "By price", style: .default, handler: { [weak self] (action) in
+            guard let `self` = self else { return }
+            self.sortResultsBy(.price)
         }))
         
         alertController.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+}
+
+// MARK: - Sort options
+extension SearchListViewController {
+    
+    private func sortResultsBy(_ type: SortType) {
+        presenter?.sortTracksBy(type)
     }
     
 }
@@ -400,11 +419,12 @@ extension SearchListViewController: SearchListViewInjection {
      *      -viewModels: array for view model tracks
      *      -fromBeginning: boolean to determinate if we're loading the tracks from scratch
      */
-    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool) {
+    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool, sortType: SortType) {
         if fromBeginning {
             searchListCollectionView?.setContentOffset(CGPoint.zero, animated: false)
         }
         
+        datasource?.sortType = sortType
         datasource?.items = viewModels
         searchListCollectionView?.reloadData()
         

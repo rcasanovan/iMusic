@@ -13,7 +13,7 @@ protocol SearchListViewInjection : class {
     func showProgress(_ show: Bool, status: String)
     func showProgress(_ show: Bool)
     func showMessageWith(title: String, message: String, actionTitle: String)
-    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool)
+    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool, sortType: SortType)
     func loadSuggestions(_ suggestions: [SuggestionViewModel])
 }
 
@@ -23,6 +23,7 @@ protocol SearchListPresenterDelegate : class {
     func trackSelectedAt(section: Int, index: Int)
     func getSuggestions()
     func suggestionSelectedAt(_ index: Int)
+    func sortTracksBy(_ type: SortType)
 }
 
 // Presenter / Interactor
@@ -37,6 +38,7 @@ protocol SearchListInteractorDelegate : class {
     func getAllSuggestions(completion: @escaping TrackListGetSuggestionsCompletionBlock)
     func getSuggestionAt(index: Int) -> SuggestionViewModel?
     func getInitialSearch() -> String
+    func getLocalTracks() -> [TrackViewModel]
 }
 
 // Presenter / Router
