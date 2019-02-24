@@ -15,10 +15,18 @@ protocol TrackDetailViewInjection : class {
 
 protocol TrackDetailPresenterDelegate : class {
     func viewDidLoad()
+    func playPressed()
+    func pausePressed()
+    func nextPressed()
+    func prevPressed()
 }
 
 // Presenter / Interactor
 protocol TrackDetailInteractorDelegate : class {
+    func playTrack()
+    func pauseTrack()
+    func nextTrack()
+    func prevTrack()
 }
 
 // Presenter / Router

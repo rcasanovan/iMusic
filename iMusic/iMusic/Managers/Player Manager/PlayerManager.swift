@@ -26,7 +26,9 @@ class PlayerManager {
     
     static let shared: PlayerManager = { return PlayerManager() }()
     
-    public func prepare(with url: URL) {
+    public func prepare(with url: URL?) {
+        guard let url = url else { return }
+        
         self.url = url
         
         NotificationCenter.default.addObserver(self, selector: #selector(didFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)

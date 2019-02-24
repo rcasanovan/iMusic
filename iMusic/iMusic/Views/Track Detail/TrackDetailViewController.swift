@@ -57,6 +57,8 @@ extension TrackDetailViewController {
         artistNameLabel.font = UIFont.mediumWithSize(size: 16.0)
         artistNameLabel.textColor = .lightGray
         artistNameLabel.textAlignment = .center
+        
+        playerControls.delegate = self
     }
     
 }
@@ -106,6 +108,27 @@ extension TrackDetailViewController {
             return
         }
         artworkImageView.hnk_setImage(from: url, placeholder: nil)
+    }
+    
+}
+
+// MARK: - PlayerControlsDelegate
+extension TrackDetailViewController: PlayerControlsDelegate {
+    
+    func playPressed() {
+        presenter?.playPressed()
+    }
+    
+    func pausePressed() {
+        presenter?.pausePressed()
+    }
+    
+    func nextPressed() {
+        presenter?.nextPressed()
+    }
+    
+    func prevPressed() {
+        presenter?.prevPressed()
     }
     
 }

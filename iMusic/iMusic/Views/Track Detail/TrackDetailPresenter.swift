@@ -12,12 +12,14 @@ class TrackDetailPresenter {
     
     private weak var view: TrackDetailViewInjection?
     private let track: TrackViewModel
+    private let interactor: TrackDetailInteractorDelegate
     private let router: TrackDetailRouterDelegate
    
     // MARK - Lifecycle
     init(view: TrackDetailViewInjection, track: TrackViewModel, navigationController: UINavigationController? = nil) {
         self.view = view
         self.track = track
+        self.interactor = TrackDetailInteractor(track: track)
         self.router = TrackDetailRouter(navigationController: navigationController)
     }
     
@@ -28,6 +30,22 @@ extension TrackDetailPresenter: TrackDetailPresenterDelegate {
     
     func viewDidLoad() {
         view?.loadTrack(track)
+    }
+    
+    func playPressed() {
+        interactor.playTrack()
+    }
+    
+    func pausePressed() {
+        interactor.pauseTrack()
+    }
+    
+    func nextPressed() {
+        interactor.nextTrack()
+    }
+    
+    func prevPressed() {
+        interactor.prevTrack()
     }
     
 }
