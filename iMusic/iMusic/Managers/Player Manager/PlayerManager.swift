@@ -11,6 +11,8 @@ import AVFoundation
 
 protocol PlayerManagerDelegate: class {
     func didFinishPlaying()
+    func currentTime(_ seconds: Int)
+    func totalSecondsDuration(_ seconds: Double)
 }
 
 class PlayerManager {
@@ -39,6 +41,16 @@ class PlayerManager {
     
     public func play() {
         player?.play()
+        
+        self.player?.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1), queue: DispatchQueue.main, using: { [weak self] (time) in
+            guard let `self` = self else { return }
+            self.processCurrentTime()
+        })
+        
+        guard let player = player, let currentItem = player.currentItem else {
+            return
+        }
+        delegate?.totalSecondsDuration(currentItem.duration.seconds)
     }
     
     public func pause() {
@@ -49,8 +61,20 @@ class PlayerManager {
 
 extension PlayerManager {
     
-    @objc func didFinishPlaying() {
+    @objc private func didFinishPlaying() {
         delegate?.didFinishPlaying()
+    }
+    
+    private func processCurrentTime() {
+        guard let player = player, let currentItem = player.currentItem else {
+            return
+        }
+        
+        if currentItem.status == .readyToPlay {
+            let currentTime = CMTimeGetSeconds(player.currentTime())
+            let secs = Int(currentTime)
+            delegate?.currentTime(secs)
+        }
     }
     
 }

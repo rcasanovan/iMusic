@@ -25,10 +25,29 @@ class TrackDetailPresenter {
     
 }
 
+// MARK: - PlayerManagerDelegate
+extension TrackDetailPresenter: PlayerManagerDelegate {
+    
+    func didFinishPlaying() {
+        print("didFinishPlaying")
+    }
+    
+    func currentTime(_ seconds: Int) {
+        print(seconds)
+    }
+    
+    func totalSecondsDuration(_ seconds: Double) {
+        let totalDuration = TrackManager.shared.getTrackTimemmssFormatWith(trackTimeMillis: Int(seconds * 1000.0))
+        view?.loadTotalDuration(totalDuration)
+    }
+    
+}
+
 // MARK: - TrackDetailPresenterDelegate
 extension TrackDetailPresenter: TrackDetailPresenterDelegate {
     
     func viewDidLoad() {
+        PlayerManager.shared.delegate = self
         view?.loadTrack(track)
     }
     
