@@ -44,7 +44,7 @@ extension SearchListPresenter {
             self.view?.showProgress(false)
             
             if let artists = artists {
-                self.view?.loadTracks(artists, fromBeginning: showProgress, sortType: self.sortType)
+                self.view?.loadTracks(artists, fromBeginning: showProgress)
                 return
             }
             
@@ -90,11 +90,12 @@ extension SearchListPresenter: SearchListPresenterDelegate {
      * Track selected at section / index
      */
     func trackSelectedAt(section: Int, index: Int) {
-        guard let trackSelected = interactor.getTrackSelectedAt(section: section, index: index), let playList = interactor.getPlayListSortedBy(sortType) else {
+        guard let trackSelected = interactor.getTrackSelectedAt(index) else {
             return
         }
         
-        router.showTrackDetail(trackSelected, allTracks: playList)
+        let tracks = interactor.getLocalTracks()
+        router.showTrackDetail(trackSelected, allTracks: tracks)
     }
     
     /**
@@ -122,8 +123,9 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     
     func sortTracksBy(_ type: SortType) {
         sortType = type
-        let localTracks = interactor.getLocalTracks()
-        view?.loadTracks(localTracks, fromBeginning: true, sortType: type)
+        interactor.sortTracksBy(sortType)
+        let tracks = interactor.getLocalTracks()
+        view?.loadTracks(tracks, fromBeginning: true)
     }
     
 }

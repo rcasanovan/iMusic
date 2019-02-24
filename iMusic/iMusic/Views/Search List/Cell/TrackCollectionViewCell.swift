@@ -11,6 +11,7 @@ import UIKit
 class TrackCollectionViewCell: UICollectionViewCell {
     
     private let trackImageView: UIImageView = UIImageView()
+    private let artistNameLabel: UILabel = UILabel()
     private let collectionNameLabel: UILabel = UILabel()
     private let trackNameLabel: UILabel = UILabel()
     private let releaseDateLabel: UILabel = UILabel()
@@ -37,6 +38,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         trackImageView.image = nil
+        artistNameLabel.text = ""
         collectionNameLabel.text = ""
         trackNameLabel.text = ""
         releaseDateLabel.text = ""
@@ -56,6 +58,7 @@ class TrackCollectionViewCell: UICollectionViewCell {
      */
     public func bindWithViewModel(_ viewModel: TrackViewModel) {
         configureArtWorkWithUrl(viewModel.artworkUrl)
+        artistNameLabel.text = viewModel.artistName
         collectionNameLabel.text = viewModel.collectionName
         trackNameLabel.text = viewModel.trackName
         releaseDateLabel.text = viewModel.releaseYear
@@ -95,7 +98,7 @@ extension TrackCollectionViewCell {
         
         struct ratio {
             static let width: CGFloat = 100.0
-            static let height: CGFloat = 160.0
+            static let height: CGFloat = 175.0
         }
         
         struct ReleaseDateLabel {
@@ -125,6 +128,9 @@ extension TrackCollectionViewCell {
         trackImageView.layer.cornerRadius = 8.0
         trackImageView.clipsToBounds = true
         
+        artistNameLabel.font = UIFont.mediumWithSize(size: 14.0)
+        artistNameLabel.textColor = .white()
+        
         collectionNameLabel.font = UIFont.mediumWithSize(size: 14.0)
         collectionNameLabel.textColor = .lightGray
         
@@ -147,6 +153,7 @@ extension TrackCollectionViewCell {
      */
     private func addSubviews() {
         addSubview(trackImageView)
+        addSubview(artistNameLabel)
         addSubview(collectionNameLabel)
         addSubview(trackNameLabel)
         addSubview(releaseDateLabel)
@@ -154,7 +161,10 @@ extension TrackCollectionViewCell {
         addSubview(genreLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: trackImageView)
-        addConstraintsWithFormat("V:|[v0]-10.0-[v1]", views: trackImageView, collectionNameLabel)
+        addConstraintsWithFormat("V:|[v0]-10.0-[v1]", views: trackImageView, artistNameLabel)
+        
+        addConstraintsWithFormat("H:|[v0]|", views: artistNameLabel)
+        addConstraintsWithFormat("V:[v0(16.0)]-5.0-[v1]", views: artistNameLabel, collectionNameLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: collectionNameLabel)
         addConstraintsWithFormat("V:[v0(16.0)]-5.0-[v1]", views: collectionNameLabel, trackNameLabel)

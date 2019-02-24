@@ -130,17 +130,10 @@ extension SearchListInteractor: SearchListInteractorDelegate {
      *      -section: the selected section
      *      -index: the selected index
      */
-    func getTrackSelectedAt(section: Int, index: Int) -> TrackViewModel? {
-        let dictionary = Dictionary(grouping: tracksViewModel, by: { $0.artistName })
-        let keysArray = Array(dictionary.keys).sorted(by: { $0 < $1 })
+    func getTrackSelectedAt(_ index: Int) -> TrackViewModel? {
+        if !tracksViewModel.indices.contains(index) { return nil }
         
-        guard let tracks = dictionary[keysArray[section]] else {
-            return nil
-        }
-        
-        if !tracks.indices.contains(index) { return nil }
-        
-        return tracks[index]
+        return tracksViewModel[index]
     }
     
     /**
@@ -179,32 +172,22 @@ extension SearchListInteractor: SearchListInteractorDelegate {
         //__ otherwise -> get the mos recent search term
         return lastSuggestion.suggestion
     }
+
+    func sortTracksBy(_ sortType: SortType) {
+        switch sortType {
+        case .artistName:
+            tracksViewModel = tracksViewModel.sorted(by: { $0.artistName < $1.artistName })
+        case .genre:
+            tracksViewModel = tracksViewModel.sorted(by: { $0.primaryGenreName < $1.primaryGenreName })
+        case .length:
+            tracksViewModel = tracksViewModel.sorted(by: { $0.trackDuration < $1.trackDuration })
+        case .price:
+            tracksViewModel = tracksViewModel.sorted(by: { $0.trackPrice ?? "" < $1.trackPrice ?? "" })
+        }
+    }
     
     func getLocalTracks() -> [TrackViewModel] {
         return tracksViewModel
-    }
-    
-    func getPlayListSortedBy(_ sortType: SortType) -> [TrackViewModel]? {
-        
-        var dictionary: Dictionary<String, [TrackViewModel]>
-        var tracks: [TrackViewModel]
-        
-        switch sortType {
-        case .artistName:
-            dictionary = Dictionary(grouping: tracksViewModel, by: { $0.artistName })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.artistName < $1.artistName })
-        case .genre:
-            dictionary = Dictionary(grouping: tracksViewModel, by: { $0.primaryGenreName })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.primaryGenreName < $1.primaryGenreName })
-        case .length:
-            dictionary = Dictionary(grouping: tracksViewModel, by: { $0.trackDuration })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackDuration < $1.trackDuration })
-        case .price:
-            dictionary = Dictionary(grouping: tracksViewModel, by: { $0.trackPrice ?? "" })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackPrice ?? "" < $1.trackPrice ?? "" })
-        }
-        
-        return tracks
     }
     
 }

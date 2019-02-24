@@ -351,10 +351,6 @@ extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollec
         return Layout.CollectionViewCell.centerSpacing
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: collectionView.frame.width, height: TrackHeaderView.height)
-    }
-    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         presenter?.trackSelectedAt(section: indexPath.section, index: indexPath.row)
     }
@@ -419,12 +415,11 @@ extension SearchListViewController: SearchListViewInjection {
      *      -viewModels: array for view model tracks
      *      -fromBeginning: boolean to determinate if we're loading the tracks from scratch
      */
-    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool, sortType: SortType) {
+    func loadTracks(_ viewModels: [TrackViewModel], fromBeginning: Bool) {
         if fromBeginning {
             searchListCollectionView?.setContentOffset(CGPoint.zero, animated: false)
         }
         
-        datasource?.sortType = sortType
         datasource?.items = viewModels
         searchListCollectionView?.reloadData()
         
