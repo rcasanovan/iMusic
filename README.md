@@ -159,16 +159,16 @@ Used to share the current track using UIActivityViewController.
 ![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/02.png?raw=true)
 
 ### Track detail
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/03.png?raw=true)
 ![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/04.png?raw=true)
-![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/05.png?raw=true)
 
 ### No internet connection screen && No results
-![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/10.png?raw=true)
-![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/03.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/05.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/06.png?raw=true)
 
 ### Sort options && Share
-![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/10.png?raw=true)
-![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/03.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/07.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/08.png?raw=true)
 
 ## Little image trick
 
