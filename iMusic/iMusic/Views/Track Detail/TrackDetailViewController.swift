@@ -25,8 +25,9 @@ class TrackDetailViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        presenter?.viewDidDisappear()
     }
     
 }

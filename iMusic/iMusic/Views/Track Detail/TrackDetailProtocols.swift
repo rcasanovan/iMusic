@@ -17,6 +17,7 @@ protocol TrackDetailViewInjection : class {
 
 protocol TrackDetailPresenterDelegate : class {
     func viewDidLoad()
+    func viewDidDisappear()
     func playPressed()
     func pausePressed()
     func nextPressed()

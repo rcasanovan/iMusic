@@ -29,7 +29,9 @@ class TrackDetailPresenter {
 extension TrackDetailPresenter: PlayerManagerDelegate {
     
     func didFinishPlaying() {
-        print("didFinishPlaying")
+        interactor.nextTrack()
+        guard let currentTrack = interactor.getCurrentTrack() else { return }
+        view?.loadTrack(currentTrack)
     }
     
     func currentTime(_ seconds: Int) {
@@ -48,6 +50,10 @@ extension TrackDetailPresenter: TrackDetailPresenterDelegate {
     func viewDidLoad() {
         PlayerManager.shared.delegate = self
         view?.loadTrack(track)
+    }
+    
+    func viewDidDisappear() {
+        interactor.pauseTrack()
     }
     
     func playPressed() {
