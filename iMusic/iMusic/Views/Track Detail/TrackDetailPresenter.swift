@@ -26,4 +26,8 @@ class TrackDetailPresenter {
 // MARK: - TrackDetailPresenterDelegate
 extension TrackDetailPresenter: TrackDetailPresenterDelegate {
     
+    func viewDidLoad() {
+        view?.loadTrack(track)
+    }
+    
 }

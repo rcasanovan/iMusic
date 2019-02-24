@@ -14,6 +14,7 @@ protocol TrackDetailViewInjection : class {
 }
 
 protocol TrackDetailPresenterDelegate : class {
+    func viewDidLoad()
 }
 
 // Presenter / Interactor
