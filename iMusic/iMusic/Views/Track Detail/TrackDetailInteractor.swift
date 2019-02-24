@@ -11,9 +11,11 @@ import Foundation
 class TrackDetailInteractor {
     
     private var track: TrackViewModel?
+    private var allTracks: [TrackViewModel]?
     
-    init(track: TrackViewModel) {
+    init(track: TrackViewModel, allTracks: [TrackViewModel]) {
         self.track = track
+        self.allTracks = allTracks
         PlayerManager.shared.prepare(with: track.previewUrl)
     }
     

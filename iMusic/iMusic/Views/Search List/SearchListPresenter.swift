@@ -90,11 +90,11 @@ extension SearchListPresenter: SearchListPresenterDelegate {
      * Track selected at section / index
      */
     func trackSelectedAt(section: Int, index: Int) {
-        guard let trackSelected = interactor.getTrackSelectedAt(section: section, index: index) else {
+        guard let trackSelected = interactor.getTrackSelectedAt(section: section, index: index), let playList = interactor.getPlayListSortedBy(sortType) else {
             return
         }
         
-        router.showTrackDetail(trackSelected, allTracks: [TrackViewModel]())
+        router.showTrackDetail(trackSelected, allTracks: playList)
     }
     
     /**

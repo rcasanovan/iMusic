@@ -39,6 +39,7 @@ protocol SearchListInteractorDelegate : class {
     func getSuggestionAt(index: Int) -> SuggestionViewModel?
     func getInitialSearch() -> String
     func getLocalTracks() -> [TrackViewModel]
+    func getPlayListSortedBy(_ sortType: SortType) -> [TrackViewModel]?
 }
 
 // Presenter / Router
