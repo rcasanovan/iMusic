@@ -8,13 +8,6 @@
 
 import Foundation
 
-enum SortType {
-    case length
-    case genre
-    case price
-    case artistName
-}
-
 class SearchListViewController: BaseViewController {
     
     public var presenter: SearchListPresenterDelegate?

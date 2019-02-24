@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol SuggestionsViewDelegate {
+protocol SuggestionsViewDelegate: class {
     func suggestionSelectedAt(index: Int)
 }
 
 class SuggestionsView: UIView {
     
-    public var delegate: SuggestionsViewDelegate?
+    public weak var delegate: SuggestionsViewDelegate?
     
     public var suggestions: [SuggestionViewModel] = [SuggestionViewModel]() {
         didSet {

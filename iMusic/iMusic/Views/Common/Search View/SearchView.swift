@@ -8,13 +8,13 @@
 
 import UIKit
 
-protocol SearchViewDelegate {
+protocol SearchViewDelegate: class {
     func searchButtonPressedWithSearch(_ search: String?)
 }
 
 class SearchView: UIView {
     
-    public var delegate: SearchViewDelegate?
+    public weak var delegate: SearchViewDelegate?
     
     /**
      * Get component's height

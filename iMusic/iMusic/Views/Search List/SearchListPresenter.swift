@@ -8,6 +8,13 @@
 
 import Foundation
 
+enum SortType {
+    case length
+    case genre
+    case price
+    case artistName
+}
+
 class SearchListPresenter {
     
     private weak var view: SearchListViewInjection?
