@@ -35,7 +35,7 @@ class NetworkTests: XCTestCase {
     func testTracksResults() {
         let tracksResultsExpectation: XCTestExpectation = self.expectation(description: "tracksResultsExpectation")
         
-        testTracksResultsWith(search: "beatles") { (response) in
+        testTracksResultsWith(search: "Noel Gallagher") { (response) in
             switch response {
             case .success(let response):
                 guard let response = response else {

@@ -26,7 +26,7 @@ public struct TrackResponse: Decodable {
     let primaryGenreName: String
     let trackPrice: Float?
     let currency: String
-    let trackTimeMillis: Int
-    let collectionName: String
+    let trackTimeMillis: Int?
+    let collectionName: String?
     
 }

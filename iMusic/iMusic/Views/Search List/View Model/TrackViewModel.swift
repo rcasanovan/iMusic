@@ -20,9 +20,9 @@ struct TrackViewModel {
     let trackViewUrl: URL?
     let trackDuration: String
     let trackPrice: String?
-    let collectionName: String
+    let collectionName: String?
     
-    init(artistName: String, trackName: String, artworkUrl: URL?, releaseDate: String, releaseYear: String, previewUrl: URL?, primaryGenreName: String, trackViewUrl: URL?, trackDuration: String, trackPrice: String?, collectionName: String) {
+    init(artistName: String, trackName: String, artworkUrl: URL?, releaseDate: String, releaseYear: String, previewUrl: URL?, primaryGenreName: String, trackViewUrl: URL?, trackDuration: String, trackPrice: String?, collectionName: String?) {
         self.artistName = artistName
         self.trackName = trackName
         self.artworkUrl = artworkUrl
@@ -75,7 +75,7 @@ extension TrackViewModel {
         let trackDuration = TrackManager.shared.getTrackTimemmssFormatWith(trackTimeMillis: artistResponse.trackTimeMillis)
         
         var trackPrice: String?
-        if let price = artistResponse.trackPrice {
+        if let price = artistResponse.trackPrice, price > 0.0 {
             trackPrice = "\(price) \(artistResponse.currency)"
         }
         
