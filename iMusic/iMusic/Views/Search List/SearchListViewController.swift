@@ -40,15 +40,6 @@ class SearchListViewController: BaseViewController {
         presenter?.viewDidLoad()
     }
     
-    /**
-     * I'm using this override method to reload the collection view
-     * when the device orientation changes
-     */
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        determinateNumberOfItemsPerRow()
-        searchListCollectionView?.reloadData()
-    }
-    
 }
 
 // MARK: - Setup views
@@ -58,8 +49,6 @@ extension SearchListViewController {
      * Setup views
      */
     private func setupViews() {
-        determinateNumberOfItemsPerRow()
-        
         view.backgroundColor = .black()
         edgesForExtendedLayout = []
         
@@ -141,18 +130,6 @@ extension SearchListViewController {
     private func addObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillBeHidden), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    /**
-     * Determinate de number of items per row
-     * (it will depend of the device orientation)
-     */
-    private func determinateNumberOfItemsPerRow() {
-        if UIDevice.current.orientation.isLandscape {
-            numberOfCellsInARow = 3
-        } else {
-            numberOfCellsInARow = 2
-        }
     }
     
 }
