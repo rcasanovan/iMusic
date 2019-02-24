@@ -32,7 +32,9 @@ class PlayerTrackDuration: UIView {
         didSet {
             guard let current = current else { return }
             currentDuration.text = TrackManager.shared.getTrackTimemmssFormatWith(trackTimeMillis: current * 1000)
-            slider.value = Float(current * 1000)
+            DispatchQueue.main.async() {
+                self.slider.setValue(Float(current * 1000), animated: true)
+            }
         }
     }
     
@@ -69,16 +71,15 @@ extension PlayerTrackDuration {
     private func configureSubviews() {
         slider.tintColor = .white()
         slider.thumbTintColor = .white()
-        
+        slider.isUserInteractionEnabled = false
+
         currentDuration.font = UIFont.mediumWithSize(size: 12.0)
         currentDuration.textColor = .white()
         totalDuration.textAlignment = .left
-        currentDuration.text = "1:21"
         
         totalDuration.font = UIFont.mediumWithSize(size: 12.0)
         totalDuration.textColor = .white()
         totalDuration.textAlignment = .right
-        totalDuration.text = "-4:53"
     }
     
 }
@@ -115,5 +116,4 @@ extension PlayerTrackDuration {
     }
     
 }
-
 

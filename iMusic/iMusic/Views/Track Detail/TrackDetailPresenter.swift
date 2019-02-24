@@ -39,6 +39,7 @@ extension TrackDetailPresenter: PlayerManagerDelegate {
     }
     
     func totalSecondsDuration(_ seconds: Double) {
+        view?.loadCurrentTime(0)
         view?.loadTotalDuration(seconds)
     }
     

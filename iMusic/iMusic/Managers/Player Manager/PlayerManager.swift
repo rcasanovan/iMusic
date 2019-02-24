@@ -19,6 +19,7 @@ class PlayerManager {
     
     public weak var delegate: PlayerManagerDelegate?
     
+    private var observer: NSKeyValueObservation?
     private var player: AVPlayer?
     private var url: URL?
     
@@ -36,6 +37,14 @@ class PlayerManager {
         NotificationCenter.default.addObserver(self, selector: #selector(didFinishPlaying), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
         
         let playerItem: AVPlayerItem = AVPlayerItem(url: url)
+        
+        // Register as an observer of the player item's status property
+        self.observer = playerItem.observe(\.status, options:  [.new, .old], changeHandler: { (playerItem, change) in
+            if playerItem.status == .readyToPlay {
+                self.readyToPlay()
+            }
+        })
+        
         player = AVPlayer(playerItem: playerItem)
     }
     
@@ -46,11 +55,6 @@ class PlayerManager {
             guard let `self` = self else { return }
             self.processCurrentTime()
         })
-        
-        guard let player = player, let currentItem = player.currentItem else {
-            return
-        }
-        delegate?.totalSecondsDuration(currentItem.duration.seconds)
     }
     
     public func pause() {
@@ -60,6 +64,13 @@ class PlayerManager {
 }
 
 extension PlayerManager {
+    
+    private func readyToPlay() {
+        guard let player = player, let currentItem = player.currentItem else {
+            return
+        }
+        delegate?.totalSecondsDuration(currentItem.duration.seconds)
+    }
     
     @objc private func didFinishPlaying() {
         delegate?.didFinishPlaying()
