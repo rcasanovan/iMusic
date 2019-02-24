@@ -95,6 +95,16 @@ extension PlayerTrackDuration {
         static let height: CGFloat = 48.0
         static let width: CGFloat = 250.0
         
+        struct Slider {
+            static let top: CGFloat = 10.0
+            static let height: CGFloat = 10.0
+        }
+        
+        struct Duration {
+            static let width: CGFloat = 40.0
+            static let height: CGFloat = 15.0
+        }
+        
     }
     
     /**
@@ -106,13 +116,13 @@ extension PlayerTrackDuration {
         addSubview(totalDuration)
         
         addConstraintsWithFormat("H:|[v0]|", views: slider)
-        addConstraintsWithFormat("V:|-10.0-[v0(10.0)]", views: slider)
+        addConstraintsWithFormat("V:|-\(Layout.Slider.top)-[v0(\(Layout.Slider.height))]", views: slider)
         
-        addConstraintsWithFormat("H:|[v0(40.0)]", views: currentDuration)
-        addConstraintsWithFormat("V:[v0(15.0)]|", views: currentDuration)
+        addConstraintsWithFormat("H:|[v0(\(Layout.Duration.width))]", views: currentDuration)
+        addConstraintsWithFormat("V:[v0(\(Layout.Duration.height))]|", views: currentDuration)
         
-        addConstraintsWithFormat("H:[v0(40.0)]|", views: totalDuration)
-        addConstraintsWithFormat("V:[v0(15.0)]|", views: totalDuration)
+        addConstraintsWithFormat("H:[v0(\(Layout.Duration.width))]|", views: totalDuration)
+        addConstraintsWithFormat("V:[v0(\(Layout.Duration.height))]|", views: totalDuration)
     }
     
 }

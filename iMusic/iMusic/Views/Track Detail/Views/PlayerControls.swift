@@ -87,6 +87,11 @@ extension PlayerControls {
         static let height: CGFloat = 48.0
         static let width: CGFloat = 250.0
         
+        struct Buttons {
+            static let height: CGFloat = 48.0
+            static let width: CGFloat = 48.0
+        }
+        
     }
     
     /**
@@ -97,16 +102,16 @@ extension PlayerControls {
         addSubview(prevButton)
         addSubview(nextButton)
         
-        addConstraintsWithFormat("H:[v0(48.0)]", views: playButton)
-        addConstraintsWithFormat("V:|[v0(48.0)]", views: playButton)
+        addConstraintsWithFormat("H:[v0(\(Layout.Buttons.width))]", views: playButton)
+        addConstraintsWithFormat("V:|[v0(\(Layout.Buttons.height))]", views: playButton)
         let playButtonCenterX = NSLayoutConstraint(item: playButton, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0.0)
         addConstraint(playButtonCenterX)
         
-        addConstraintsWithFormat("H:|[v0(48.0)]", views: prevButton)
-        addConstraintsWithFormat("V:|[v0(48.0)]", views: prevButton)
+        addConstraintsWithFormat("H:|[v0(\(Layout.Buttons.width))]", views: prevButton)
+        addConstraintsWithFormat("V:|[v0(\(Layout.Buttons.height))]", views: prevButton)
         
-        addConstraintsWithFormat("H:[v0(48.0)]|", views: nextButton)
-        addConstraintsWithFormat("V:|[v0(48.0)]", views: nextButton)
+        addConstraintsWithFormat("H:[v0(\(Layout.Buttons.width))]|", views: nextButton)
+        addConstraintsWithFormat("V:|[v0(\(Layout.Buttons.height))]", views: nextButton)
     }
     
 }
