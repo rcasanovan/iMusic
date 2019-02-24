@@ -66,6 +66,11 @@
 		C86CB72D2221F7DD0029D757 /* SearchListProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */; };
 		C86CB730222202260029D757 /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB72F222202260029D757 /* TrackManager.swift */; };
 		C86CB733222203AA0029D757 /* TimeInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB732222203AA0029D757 /* TimeInterval.swift */; };
+		C86CB7382222A3AF0029D757 /* TrackDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7342222A3AF0029D757 /* TrackDetailRouter.swift */; };
+		C86CB7392222A3AF0029D757 /* TrackDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7352222A3AF0029D757 /* TrackDetailViewController.swift */; };
+		C86CB73A2222A3AF0029D757 /* TrackDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7362222A3AF0029D757 /* TrackDetailPresenter.swift */; };
+		C86CB73B2222A3AF0029D757 /* TrackDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7372222A3AF0029D757 /* TrackDetailProtocols.swift */; };
+		C86CB73D2222A43A0029D757 /* TrackDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB73C2222A43A0029D757 /* TrackDetailInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -147,6 +152,11 @@
 		C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchListProtocols.swift; sourceTree = "<group>"; };
 		C86CB72F222202260029D757 /* TrackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackManager.swift; sourceTree = "<group>"; };
 		C86CB732222203AA0029D757 /* TimeInterval.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeInterval.swift; sourceTree = "<group>"; };
+		C86CB7342222A3AF0029D757 /* TrackDetailRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailRouter.swift; sourceTree = "<group>"; };
+		C86CB7352222A3AF0029D757 /* TrackDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailViewController.swift; sourceTree = "<group>"; };
+		C86CB7362222A3AF0029D757 /* TrackDetailPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailPresenter.swift; sourceTree = "<group>"; };
+		C86CB7372222A3AF0029D757 /* TrackDetailProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackDetailProtocols.swift; sourceTree = "<group>"; };
+		C86CB73C2222A43A0029D757 /* TrackDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailInteractor.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -457,6 +467,11 @@
 		C86CB6ED2221F3600029D757 /* Track Detail */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB7372222A3AF0029D757 /* TrackDetailProtocols.swift */,
+				C86CB7352222A3AF0029D757 /* TrackDetailViewController.swift */,
+				C86CB7362222A3AF0029D757 /* TrackDetailPresenter.swift */,
+				C86CB73C2222A43A0029D757 /* TrackDetailInteractor.swift */,
+				C86CB7342222A3AF0029D757 /* TrackDetailRouter.swift */,
 			);
 			path = "Track Detail";
 			sourceTree = "<group>";
@@ -829,12 +844,16 @@
 				C86CB7102221F59F0029D757 /* GeneralMessageViewController.swift in Sources */,
 				C86CB6F02221F3BC0029D757 /* BaseViewController.swift in Sources */,
 				C86CB6A42221EEF90029D757 /* ReachabilityManager.swift in Sources */,
+				C86CB73A2222A3AF0029D757 /* TrackDetailPresenter.swift in Sources */,
+				C86CB7382222A3AF0029D757 /* TrackDetailRouter.swift in Sources */,
 				C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */,
 				C86CB7292221F7DD0029D757 /* SearchListDatasource.swift in Sources */,
 				C86CB7062221F4CF0029D757 /* SearchView.swift in Sources */,
 				C86CB6F82221F3F90029D757 /* SuggestionTableViewCell.swift in Sources */,
+				C86CB7392222A3AF0029D757 /* TrackDetailViewController.swift in Sources */,
 				C86CB72B2221F7DD0029D757 /* SearchListPresenter.swift in Sources */,
 				C86CB6DE2221F1A00029D757 /* SearchSuggestionsManager.swift in Sources */,
+				C86CB73D2222A43A0029D757 /* TrackDetailInteractor.swift in Sources */,
 				C86CB730222202260029D757 /* TrackManager.swift in Sources */,
 				C86CB6F92221F3F90029D757 /* SuggestionsView.swift in Sources */,
 				C86CB6A32221EEF90029D757 /* Reachability.m in Sources */,
@@ -850,6 +869,7 @@
 				C86CB7182221F6C00029D757 /* TrackCollectionViewCell.swift in Sources */,
 				C86CB7282221F7DD0029D757 /* SearchListRouter.swift in Sources */,
 				C86CB6BD2221EFD80029D757 /* Track.swift in Sources */,
+				C86CB73B2222A3AF0029D757 /* TrackDetailProtocols.swift in Sources */,
 				C86CB7212221F7980029D757 /* UIEdgeInsets.swift in Sources */,
 				C86CB72A2221F7DD0029D757 /* SearchListInteractor.swift in Sources */,
 				C86CB7122221F59F0029D757 /* GeneralMessagePresenter.swift in Sources */,
