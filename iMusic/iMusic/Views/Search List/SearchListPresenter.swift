@@ -36,7 +36,7 @@ extension SearchListPresenter {
      *      -showProgress: a boolean to show / hide the progress
      */
     private func getTracks(_ search: String? = nil, showProgress: Bool) {
-        view?.showProgress(showProgress, status: "Loading artists")
+        view?.showProgress(showProgress, status: "Loading tracks")
         
         interactor.getTracksList(search: search) { [weak self] (artists, success, error) in
             guard let `self` = self else { return }
