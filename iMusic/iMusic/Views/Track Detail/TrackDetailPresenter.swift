@@ -26,22 +26,4 @@ class TrackDetailPresenter {
 // MARK: - TrackDetailPresenterDelegate
 extension TrackDetailPresenter: TrackDetailPresenterDelegate {
     
-    /**
-     * View did load
-     */
-    func viewDidLoad() {
-        view?.loadTrack(track)
-    }
-    
-    /**
-     * Show in Music selected
-     */
-    func showInMusicSelected() {
-        guard let url = track.trackViewUrl else {
-            return
-        }
-        
-        router.showTrackInMusicWithUrl(url)
-    }
-    
 }
