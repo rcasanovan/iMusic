@@ -93,6 +93,8 @@ extension SearchListPresenter: SearchListPresenterDelegate {
         guard let trackSelected = interactor.getTrackSelectedAt(section: section, index: index) else {
             return
         }
+        
+        router.showTrackDetail(trackSelected, allTracks: [TrackViewModel]())
     }
     
     /**

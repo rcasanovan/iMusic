@@ -31,4 +31,9 @@ class SearchListRouter {
 // MARK: - SearchListRouterDelegate
 extension SearchListRouter: SearchListRouterDelegate {
     
+    func showTrackDetail(_ track: TrackViewModel, allTracks: [TrackViewModel]) {
+        let trackDetailVC = TrackDetailRouter.setupModuleWithCurrentTrack(track, allTracks: allTracks, navigationController:  navigationController)
+        navigationController?.pushViewController(trackDetailVC, animated: true)
+    }
+    
 }

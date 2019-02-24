@@ -21,7 +21,7 @@ class TrackDetailRouter {
     /**
      * Setup the initial module
      */
-    public static func setupModuleWithTrack(_ track: TrackViewModel, navigationController: UINavigationController?) -> TrackDetailViewController {
+    public static func setupModuleWithCurrentTrack(_ track: TrackViewModel, allTracks: [TrackViewModel], navigationController: UINavigationController?) -> TrackDetailViewController {
         let trackDetailVC = TrackDetailViewController()
         trackDetailVC.presenter = TrackDetailPresenter(view: trackDetailVC, track: track, navigationController: navigationController)
         return trackDetailVC
