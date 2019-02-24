@@ -15,6 +15,7 @@ class TrackDetailViewController: BaseViewController {
     private let artworkImageView: UIImageView = UIImageView()
     private let trackNameLabel: UILabel = UILabel()
     private let artistNameLabel: UILabel = UILabel()
+    private let trackDuration: PlayerTrackDuration = PlayerTrackDuration()
     private let playerControls: PlayerControls = PlayerControls()
     
     override func viewDidLoad() {
@@ -56,8 +57,6 @@ extension TrackDetailViewController {
         artistNameLabel.font = UIFont.mediumWithSize(size: 16.0)
         artistNameLabel.textColor = .lightGray
         artistNameLabel.textAlignment = .center
-        
-        playerControls.backgroundColor = .yellow
     }
     
 }
@@ -72,6 +71,7 @@ extension TrackDetailViewController {
         view.addSubview(artworkImageView)
         view.addSubview(trackNameLabel)
         view.addSubview(artistNameLabel)
+        view.addSubview(trackDuration)
         view.addSubview(playerControls)
         
         view.addConstraintsWithFormat("H:[v0(250.0)]", views: artworkImageView)
@@ -85,8 +85,13 @@ extension TrackDetailViewController {
         view.addConstraintsWithFormat("H:|-16.0-[v0]-16.0-|", views: artistNameLabel)
         view.addConstraintsWithFormat("V:[v0]-10.0-[v1(21.0)]", views: trackNameLabel, artistNameLabel)
         
+        view.addConstraintsWithFormat("H:[v0(\(trackDuration.width))]", views: trackDuration)
+        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(\(trackDuration.height))]", views: artistNameLabel, trackDuration)
+        let trackDurationCenterX = NSLayoutConstraint(item: trackDuration, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
+        view.addConstraint(trackDurationCenterX)
+        
         view.addConstraintsWithFormat("H:[v0(\(playerControls.width))]", views: playerControls)
-        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(\(playerControls.height))]", views: artistNameLabel, playerControls)
+        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(\(playerControls.height))]", views: trackDuration, playerControls)
         let playerControlsCenterX = NSLayoutConstraint(item: playerControls, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
         view.addConstraint(playerControlsCenterX)
     }

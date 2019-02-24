@@ -73,6 +73,7 @@
 		C86CB73D2222A43A0029D757 /* TrackDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB73C2222A43A0029D757 /* TrackDetailInteractor.swift */; };
 		C86CB7402222ABF30029D757 /* PlayerControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB73F2222ABF30029D757 /* PlayerControls.swift */; };
 		C86CB7432222B1D30029D757 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7422222B1D30029D757 /* UIImage.swift */; };
+		C86CB7452222B4E60029D757 /* PlayerTrackDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7442222B4E60029D757 /* PlayerTrackDuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,6 +162,7 @@
 		C86CB73C2222A43A0029D757 /* TrackDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailInteractor.swift; sourceTree = "<group>"; };
 		C86CB73F2222ABF30029D757 /* PlayerControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerControls.swift; sourceTree = "<group>"; };
 		C86CB7422222B1D30029D757 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		C86CB7442222B4E60029D757 /* PlayerTrackDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackDuration.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -619,6 +621,7 @@
 			isa = PBXGroup;
 			children = (
 				C86CB73F2222ABF30029D757 /* PlayerControls.swift */,
+				C86CB7442222B4E60029D757 /* PlayerTrackDuration.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -888,6 +891,7 @@
 				C86CB6B72221EFD80029D757 /* NetworkHeaders.swift in Sources */,
 				C86CB6E92221F2AF0029D757 /* String.swift in Sources */,
 				C86CB71B2221F7140029D757 /* TrackViewModel.swift in Sources */,
+				C86CB7452222B4E60029D757 /* PlayerTrackDuration.swift in Sources */,
 				C86CB7182221F6C00029D757 /* TrackCollectionViewCell.swift in Sources */,
 				C86CB7282221F7DD0029D757 /* SearchListRouter.swift in Sources */,
 				C86CB7402222ABF30029D757 /* PlayerControls.swift in Sources */,

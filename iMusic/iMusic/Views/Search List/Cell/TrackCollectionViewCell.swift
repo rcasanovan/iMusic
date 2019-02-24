@@ -95,7 +95,7 @@ extension TrackCollectionViewCell {
         
         struct ratio {
             static let width: CGFloat = 100.0
-            static let height: CGFloat = 150.0
+            static let height: CGFloat = 160.0
         }
         
         struct ReleaseDateLabel {
