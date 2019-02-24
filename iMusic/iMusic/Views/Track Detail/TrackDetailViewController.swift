@@ -58,4 +58,8 @@ extension TrackDetailViewController {
 
 // MARK: - TrackDetailViewInjection
 extension TrackDetailViewController: TrackDetailViewInjection {
+    
+    func loadTrack(_ track: TrackViewModel) {
+    }
+    
 }

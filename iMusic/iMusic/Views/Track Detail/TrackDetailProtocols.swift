@@ -10,6 +10,7 @@ import Foundation
 
 // View / Presenter
 protocol TrackDetailViewInjection : class {
+    func loadTrack(_ track: TrackViewModel)
 }
 
 protocol TrackDetailPresenterDelegate : class {
