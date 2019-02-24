@@ -33,12 +33,11 @@ extension TrackDetailPresenter: PlayerManagerDelegate {
     }
     
     func currentTime(_ seconds: Int) {
-        print(seconds)
+        view?.loadCurrentTime(seconds)
     }
     
     func totalSecondsDuration(_ seconds: Double) {
-        let totalDuration = TrackManager.shared.getTrackTimemmssFormatWith(trackTimeMillis: Int(seconds * 1000.0))
-        view?.loadTotalDuration(totalDuration)
+        view?.loadTotalDuration(seconds)
     }
     
 }

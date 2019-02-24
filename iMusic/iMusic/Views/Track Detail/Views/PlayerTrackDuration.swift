@@ -28,6 +28,22 @@ class PlayerTrackDuration: UIView {
         return Layout.width
     }
     
+    public var current: Int? {
+        didSet {
+            guard let current = current else { return }
+            currentDuration.text = TrackManager.shared.getTrackTimemmssFormatWith(trackTimeMillis: current * 1000)
+            slider.value = Float(current * 1000)
+        }
+    }
+    
+    public var total: Double? {
+        didSet {
+            guard let total = total, !(total.isNaN || total.isInfinite) else { return }
+            totalDuration.text = TrackManager.shared.getTrackTimemmssFormatWith(trackTimeMillis: Int(total * 1000.0))
+            slider.maximumValue = Float(total * 1000.0)
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupViews()

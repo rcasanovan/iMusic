@@ -142,12 +142,12 @@ extension TrackDetailViewController: TrackDetailViewInjection {
         artistNameLabel.text = track.artistName
     }
     
-    func loadTotalDuration(_ totalDuration: String) {
-        print("loadTotalDuration")
+    func loadTotalDuration(_ totalDuration: Double) {
+        trackDuration.total = totalDuration
     }
     
-    func loadCurrentTime(_ currentTime: String) {
-        print("loadCurrentTime")
+    func loadCurrentTime(_ currentTime: Int) {
+        trackDuration.current = currentTime
     }
     
 }

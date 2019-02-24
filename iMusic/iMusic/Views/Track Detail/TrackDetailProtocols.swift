@@ -11,8 +11,8 @@ import Foundation
 // View / Presenter
 protocol TrackDetailViewInjection : class {
     func loadTrack(_ track: TrackViewModel)
-    func loadTotalDuration(_ totalDuration: String)
-    func loadCurrentTime(_ currentTime: String)
+    func loadTotalDuration(_ totalDuration: Double)
+    func loadCurrentTime(_ currentTime: Int)
 }
 
 protocol TrackDetailPresenterDelegate : class {
