@@ -114,7 +114,6 @@ extension SearchListViewController {
      */
     private func registerCells() {
         searchListCollectionView?.register(TrackCollectionViewCell.self, forCellWithReuseIdentifier: TrackCollectionViewCell.identifier)
-        searchListCollectionView?.register(TrackHeaderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader , withReuseIdentifier: TrackHeaderView.identifier)
     }
     
     /**

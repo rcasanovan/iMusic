@@ -53,7 +53,6 @@
 		C86CB7102221F59F0029D757 /* GeneralMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70D2221F59F0029D757 /* GeneralMessageViewController.swift */; };
 		C86CB7112221F59F0029D757 /* GeneralMessageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70E2221F59F0029D757 /* GeneralMessageProtocols.swift */; };
 		C86CB7122221F59F0029D757 /* GeneralMessagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB70F2221F59F0029D757 /* GeneralMessagePresenter.swift */; };
-		C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7142221F67E0029D757 /* TrackHeaderView.swift */; };
 		C86CB7182221F6C00029D757 /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7172221F6C00029D757 /* TrackCollectionViewCell.swift */; };
 		C86CB71B2221F7140029D757 /* TrackViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB71A2221F7140029D757 /* TrackViewModel.swift */; };
 		C86CB71E2221F75B0029D757 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB71D2221F75B0029D757 /* Date.swift */; };
@@ -145,7 +144,6 @@
 		C86CB70D2221F59F0029D757 /* GeneralMessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageViewController.swift; sourceTree = "<group>"; };
 		C86CB70E2221F59F0029D757 /* GeneralMessageProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessageProtocols.swift; sourceTree = "<group>"; };
 		C86CB70F2221F59F0029D757 /* GeneralMessagePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralMessagePresenter.swift; sourceTree = "<group>"; };
-		C86CB7142221F67E0029D757 /* TrackHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHeaderView.swift; sourceTree = "<group>"; };
 		C86CB7172221F6C00029D757 /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		C86CB71A2221F7140029D757 /* TrackViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackViewModel.swift; sourceTree = "<group>"; };
 		C86CB71D2221F75B0029D757 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
@@ -467,7 +465,6 @@
 		C86CB6EC2221F3560029D757 /* Search List */ = {
 			isa = PBXGroup;
 			children = (
-				C86CB7132221F6650029D757 /* TrackHeaderView */,
 				C86CB7162221F6B40029D757 /* Cell */,
 				C86CB7192221F7010029D757 /* View Model */,
 				C86CB7272221F7DD0029D757 /* SearchListProtocols.swift */,
@@ -568,14 +565,6 @@
 				C86CB70B2221F51A0029D757 /* UIFont.swift */,
 			);
 			path = UIFont;
-			sourceTree = "<group>";
-		};
-		C86CB7132221F6650029D757 /* TrackHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				C86CB7142221F67E0029D757 /* TrackHeaderView.swift */,
-			);
-			path = TrackHeaderView;
 			sourceTree = "<group>";
 		};
 		C86CB7162221F6B40029D757 /* Cell */ = {
@@ -905,7 +894,6 @@
 				C86CB73A2222A3AF0029D757 /* TrackDetailPresenter.swift in Sources */,
 				C86CB74E2222D1A80029D757 /* ShareManager.swift in Sources */,
 				C86CB7382222A3AF0029D757 /* TrackDetailRouter.swift in Sources */,
-				C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */,
 				C86CB7292221F7DD0029D757 /* SearchListDatasource.swift in Sources */,
 				C86CB7062221F4CF0029D757 /* SearchView.swift in Sources */,
 				C86CB6F82221F3F90029D757 /* SuggestionTableViewCell.swift in Sources */,
