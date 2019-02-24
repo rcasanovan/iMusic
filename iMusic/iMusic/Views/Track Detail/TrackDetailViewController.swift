@@ -72,6 +72,41 @@ extension TrackDetailViewController {
 extension TrackDetailViewController {
     
     /**
+     * Internal struct for layout
+     */
+    private struct Layout {
+        
+        struct ArtworkImageView {
+            static let height: CGFloat = 250.0
+            static let width: CGFloat = 250.0
+            static let top: CGFloat = 10.0
+        }
+        
+        struct TrackNameLabel {
+            static let leading: CGFloat = 16.0
+            static let trailing: CGFloat = 16.0
+            static let top: CGFloat = 10.0
+            static let height: CGFloat = 21.0
+        }
+        
+        struct ArtistNameLabel {
+            static let leading: CGFloat = 16.0
+            static let trailing: CGFloat = 16.0
+            static let top: CGFloat = 10.0
+            static let height: CGFloat = 21.0
+        }
+        
+        struct TrackDuration {
+            static let top: CGFloat = 10.0
+        }
+        
+        struct PlayerControls {
+            static let top: CGFloat = 10.0
+        }
+        
+    }
+    
+    /**
      * Add subviews
      */
     private func addSubviews() {
@@ -81,24 +116,24 @@ extension TrackDetailViewController {
         view.addSubview(trackDuration)
         view.addSubview(playerControls)
         
-        view.addConstraintsWithFormat("H:[v0(250.0)]", views: artworkImageView)
-        view.addConstraintsWithFormat("V:|-10.0-[v0(250.0)]", views: artworkImageView)
+        view.addConstraintsWithFormat("H:[v0(\(Layout.ArtworkImageView.width))]", views: artworkImageView)
+        view.addConstraintsWithFormat("V:|-\(Layout.ArtworkImageView.top)-[v0(\(Layout.ArtworkImageView.height))]", views: artworkImageView)
         let artworkImageViewCenterX = NSLayoutConstraint(item: artworkImageView, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
         view.addConstraint(artworkImageViewCenterX)
         
-        view.addConstraintsWithFormat("H:|-16.0-[v0]-16.0-|", views: trackNameLabel)
-        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(21.0)]", views: artworkImageView, trackNameLabel)
+        view.addConstraintsWithFormat("H:|-\(Layout.TrackNameLabel.leading)-[v0]-\(Layout.TrackNameLabel.trailing)-|", views: trackNameLabel)
+        view.addConstraintsWithFormat("V:[v0]-\(Layout.TrackNameLabel.top)-[v1(\(Layout.TrackNameLabel.height))]", views: artworkImageView, trackNameLabel)
         
-        view.addConstraintsWithFormat("H:|-16.0-[v0]-16.0-|", views: artistNameLabel)
-        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(21.0)]", views: trackNameLabel, artistNameLabel)
+        view.addConstraintsWithFormat("H:|-\(Layout.ArtistNameLabel.leading)-[v0]-\(Layout.ArtistNameLabel.trailing)-|", views: artistNameLabel)
+        view.addConstraintsWithFormat("V:[v0]-\(Layout.ArtistNameLabel.top)-[v1(\(Layout.ArtistNameLabel.height))]", views: trackNameLabel, artistNameLabel)
         
         view.addConstraintsWithFormat("H:[v0(\(trackDuration.width))]", views: trackDuration)
-        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(\(trackDuration.height))]", views: artistNameLabel, trackDuration)
+        view.addConstraintsWithFormat("V:[v0]-\(Layout.TrackDuration.top)-[v1(\(trackDuration.height))]", views: artistNameLabel, trackDuration)
         let trackDurationCenterX = NSLayoutConstraint(item: trackDuration, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
         view.addConstraint(trackDurationCenterX)
         
         view.addConstraintsWithFormat("H:[v0(\(playerControls.width))]", views: playerControls)
-        view.addConstraintsWithFormat("V:[v0]-10.0-[v1(\(playerControls.height))]", views: trackDuration, playerControls)
+        view.addConstraintsWithFormat("V:[v0]-\(Layout.PlayerControls.top)-[v1(\(playerControls.height))]", views: trackDuration, playerControls)
         let playerControlsCenterX = NSLayoutConstraint(item: playerControls, attribute: .centerX, relatedBy: .equal, toItem: view, attribute: .centerX, multiplier: 1.0, constant: 0.0)
         view.addConstraint(playerControlsCenterX)
     }
