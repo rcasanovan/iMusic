@@ -166,6 +166,10 @@ Used to share the current track using UIActivityViewController.
 ![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/10.png?raw=true)
 ![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/03.png?raw=true)
 
+### Sort options && Share
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/10.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/03.png?raw=true)
+
 ## Little image trick
 
 The API response has 3 different sizes for artists / tracks:
