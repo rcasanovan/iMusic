@@ -182,8 +182,8 @@ In this case if we're using the max size for images the result is not the best. 
 
 ### 100x100 px vs 200x200 px
 
-![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/11.png?raw=true)
-![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/12.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/09.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/10.png?raw=true)
 
 ## What's left in the demo?
 
