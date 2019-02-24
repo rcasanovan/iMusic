@@ -150,16 +150,34 @@ extension TrackDetailViewController: PlayerControlsDelegate {
 // MARK: - TrackDetailViewInjection
 extension TrackDetailViewController: TrackDetailViewInjection {
     
+    /**
+     * Load track
+     *
+     * - parameters:
+     *      -track: track view model to load
+     */
     func loadTrack(_ track: TrackViewModel) {
         configureArtWorkWithUrl(track.artworkUrl)
         trackNameLabel.text = track.trackName
         artistNameLabel.text = track.artistName
     }
     
+    /**
+     * Load total duration track
+     *
+     * - parameters:
+     *      -totalDuration: the total duration track
+     */
     func loadTotalDuration(_ totalDuration: Double) {
         trackDuration.total = totalDuration
     }
     
+    /**
+     * Load current time track
+     *
+     * - parameters:
+     *      -currentTime: the current time track
+     */
     func loadCurrentTime(_ currentTime: Int) {
         trackDuration.current = currentTime
     }

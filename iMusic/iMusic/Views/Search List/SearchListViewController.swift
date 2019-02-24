@@ -352,7 +352,7 @@ extension SearchListViewController: UICollectionViewDelegateFlowLayout, UICollec
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.trackSelectedAt(section: indexPath.section, index: indexPath.row)
+        presenter?.trackSelectedAt(indexPath.row)
     }
     
 }

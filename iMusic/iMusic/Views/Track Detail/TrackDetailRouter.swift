@@ -28,20 +28,3 @@ class TrackDetailRouter {
     }
     
 }
-
-// MARK: - TrackDetailRouterDelegate
-extension TrackDetailRouter: TrackDetailRouterDelegate {
-    
-    /**
-     * Show track in Music
-     * NOTE: this feature is working ONLY in a real device
-     *
-     * - parameters:
-     *      -url: url to open the track in Music app
-     */
-    func showTrackInMusicWithUrl(_ url: URL) {
-        let safariVC = SFSafariViewController(url: url)
-        navigationController?.present(safariVC, animated: true, completion: nil)
-    }
-    
-}

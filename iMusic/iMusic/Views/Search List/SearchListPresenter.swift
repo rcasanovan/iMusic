@@ -87,9 +87,9 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     }
     
     /**
-     * Track selected at section / index
+     * Track selected at index
      */
-    func trackSelectedAt(section: Int, index: Int) {
+    func trackSelectedAt(_ index: Int) {
         guard let trackSelected = interactor.getTrackSelectedAt(index) else {
             return
         }

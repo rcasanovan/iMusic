@@ -33,7 +33,3 @@ protocol TrackDetailInteractorDelegate : class {
     func prevTrack()
     func getCurrentTrack() -> TrackViewModel?
 }
-
-// Presenter / Router
-protocol TrackDetailRouterDelegate : class {
-}

@@ -20,7 +20,7 @@ protocol SearchListViewInjection : class {
 protocol SearchListPresenterDelegate : class {
     func viewDidLoad()
     func searchTrack(_ search: String?)
-    func trackSelectedAt(section: Int, index: Int)
+    func trackSelectedAt(_ index: Int)
     func getSuggestions()
     func suggestionSelectedAt(_ index: Int)
     func sortTracksBy(_ type: SortType)
