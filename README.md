@@ -125,3 +125,31 @@ class SearchSuggestion: Object {
 As I'm using Realm for this it's important to define a class to manage each model in the database. In this case we only have one model (FavoriteRecipe)
 
 Reference: [Realm](https://realm.io/docs/swift/latest)
+
+## Managers
+
+I think using managers is a good idea but be careful!. Please don't create managers as if the world were going to end tomorrow.
+
+I'm using 5 here:
+
+### ReachabilityManager
+
+Used to manage the reachability. In this case I would like to notify a little issue related with the simulator. ***It seems Xcode has an issue with the simulator because if you try to turn off the wifi and turning on again, the observer for the state change is not triggering. It's working 100% fine in a real device***.
+
+### SearchSuggestionsManager
+
+Used to save the sucessfull searchs locally using a Realm database.
+
+### TrackManager
+
+Used to process the tracks from iTunes API.
+
+### PlayerManager
+
+Used to process the songs from iTunes API.
+
+### ShareManager
+
+Used to share the current track using UIActivityViewController.
+
+## How it looks like?
