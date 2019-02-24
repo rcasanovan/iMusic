@@ -8,11 +8,22 @@
 
 import UIKit
 
+protocol PlayerControlsDelegate: class {
+    func playPressed()
+    func pausePressed()
+    func nextPressed()
+    func prevPressed()
+}
+
 class PlayerControls: UIView {
+    
+    weak var delegate: PlayerControlsDelegate?
     
     private let playButton: UIButton = UIButton(type: .custom)
     private let prevButton: UIButton = UIButton(type: .custom)
     private let nextButton: UIButton = UIButton(type: .custom)
+    
+    private var isPlaying: Bool = false
     
     /**
      * Get component's height
@@ -51,14 +62,16 @@ extension PlayerControls {
     }
     
     private func configureSubviews() {
-        let playImage = UIImage(named: "Play")?.imageWithColor(.white())
-        playButton.setBackgroundImage(playImage, for: .normal)
+        configurePlayButton()
+        playButton.addTarget(self, action: #selector(playButtonPressed), for: .touchUpInside)
         
         let prevImage = UIImage(named: "Prev")?.imageWithColor(.white())
         prevButton.setBackgroundImage(prevImage, for: .normal)
+        prevButton.addTarget(self, action: #selector(prevButtonPressed), for: .touchUpInside)
         
         let nextImage = UIImage(named: "Next")?.imageWithColor(.white())
         nextButton.setBackgroundImage(nextImage, for: .normal)
+        nextButton.addTarget(self, action: #selector(nextButtonPressed), for: .touchUpInside)
     }
     
 }
@@ -94,6 +107,43 @@ extension PlayerControls {
         
         addConstraintsWithFormat("H:[v0(48.0)]|", views: nextButton)
         addConstraintsWithFormat("V:|[v0(48.0)]", views: nextButton)
+    }
+    
+}
+
+// MARK: - Private section
+extension PlayerControls {
+    
+    private func configurePlayButton() {
+        if isPlaying {
+            let playImage = UIImage(named: "Pause")?.imageWithColor(.white())
+            playButton.setBackgroundImage(playImage, for: .normal)
+        } else {
+            let pauseImage = UIImage(named: "Play")?.imageWithColor(.white())
+            playButton.setBackgroundImage(pauseImage, for: .normal)
+        }
+    }
+}
+
+// MARK: - User actions
+extension PlayerControls {
+    
+    @objc private func playButtonPressed() {
+        isPlaying = !isPlaying
+        configurePlayButton()
+        if isPlaying {
+            delegate?.playPressed()
+        } else {
+            delegate?.pausePressed()
+        }
+    }
+    
+    @objc private func prevButtonPressed() {
+        delegate?.prevPressed()
+    }
+    
+    @objc private func nextButtonPressed() {
+        delegate?.nextPressed()
     }
     
 }
