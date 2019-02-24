@@ -13,9 +13,11 @@ class SearchListPresenter {
     private weak var view: SearchListViewInjection?
     private let interactor: SearchListInteractorDelegate
     private let router: SearchListRouterDelegate
+    private var sortType: SortType
     
     // MARK - Lifecycle
     init(view: SearchListViewInjection, navigationController: UINavigationController? = nil) {
+        self.sortType = .artistName
         self.view = view
         self.interactor = SearchListInteractor()
         self.router = SearchListRouter(navigationController: navigationController)
@@ -42,7 +44,7 @@ extension SearchListPresenter {
             self.view?.showProgress(false)
             
             if let artists = artists {
-                self.view?.loadTracks(artists, fromBeginning: showProgress, sortType: .artistName)
+                self.view?.loadTracks(artists, fromBeginning: showProgress, sortType: self.sortType)
                 return
             }
             
@@ -80,6 +82,7 @@ extension SearchListPresenter: SearchListPresenterDelegate {
      */
     func searchTrack(_ search: String?) {
         interactor.clear()
+        sortType = .artistName
         getTracks(search, showProgress: true)
     }
     
@@ -116,7 +119,8 @@ extension SearchListPresenter: SearchListPresenterDelegate {
     }
     
     func sortTracksBy(_ type: SortType) {
-        let localTracks = interactor.getLocalTracksSortedBy(type)
+        sortType = type
+        let localTracks = interactor.getLocalTracks()
         view?.loadTracks(localTracks, fromBeginning: true, sortType: type)
     }
     

@@ -15,18 +15,16 @@ class SearchListInteractor {
     private let requestManager: RequestManager
     private var tracksViewModel: [TrackViewModel]
     private var suggestions: [SuggestionViewModel]
-    private var sortType: SortType
     
     // MARK - Lifecycle
     convenience init() {
-        self.init(requestManager: RequestManager(), tracksViewModel: [TrackViewModel](), suggestions: [SuggestionViewModel](), sortType: .artistName)
+        self.init(requestManager: RequestManager(), tracksViewModel: [TrackViewModel](), suggestions: [SuggestionViewModel]())
     }
     
-    init(requestManager: RequestManager, tracksViewModel: [TrackViewModel], suggestions: [SuggestionViewModel], sortType: SortType) {
+    init(requestManager: RequestManager, tracksViewModel: [TrackViewModel], suggestions: [SuggestionViewModel]) {
         self.requestManager = requestManager
         self.tracksViewModel = tracksViewModel
         self.suggestions = suggestions
-        self.sortType = sortType
     }
     
 }
@@ -182,8 +180,7 @@ extension SearchListInteractor: SearchListInteractorDelegate {
         return lastSuggestion.suggestion
     }
     
-    func getLocalTracksSortedBy(_ sortType: SortType) -> [TrackViewModel] {
-        self.sortType = sortType
+    func getLocalTracks() -> [TrackViewModel] {
         return tracksViewModel
     }
     
