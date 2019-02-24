@@ -99,3 +99,29 @@ public struct TrackResponse: Decodable {
     
 }
 ```
+
+I'm using a Swift Standard Library decodable functionality in order to manage a type that can decode itself from an external representation (I really ❤ this from Swift).
+
+Reference: [Apple documentation](https://developer.apple.com/documentation/swift/swift_standard_library/encoding_decoding_and_serialization)
+
+### Local suggestions data model
+
+This model is used for the local suggestions:
+
+```swift
+class SearchSuggestion: Object {
+    
+    @objc dynamic var suggestionId: String?
+    @objc dynamic var suggestion: String = ""
+    @objc dynamic var timestamp: TimeInterval = NSDate().timeIntervalSince1970
+    
+    override class func primaryKey() -> String? {
+        return "suggestionId"
+    }
+    
+}
+```
+
+As I'm using Realm for this it's important to define a class to manage each model in the database. In this case we only have one model (FavoriteRecipe)
+
+Reference: [Realm](https://realm.io/docs/swift/latest)
