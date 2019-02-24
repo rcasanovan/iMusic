@@ -65,3 +65,37 @@ protocol SearchListRouterDelegate : class {
     func showTrackDetail(_ track: TrackViewModel, allTracks: [TrackViewModel])
 }
 ```
+
+## First at all. Where is the data came from?
+
+I'm using the iTunes search api. You can check the API [here](https://affiliate.itunes.apple.com/resources/documentation/itunes-store-web-service-search-api/).
+
+## Data models
+
+### Network data models
+
+```swift
+public struct TracksResponse: Decodable {
+    
+    let resultCount: UInt
+    let results: [TrackResponse]
+    
+}
+
+public struct TrackResponse: Decodable {
+    
+    let artistName: String
+    let trackId: Int
+    let trackName: String
+    let trackViewUrl: String
+    let previewUrl: String?
+    let artworkUrl100: String
+    let releaseDate: String
+    let primaryGenreName: String
+    let trackPrice: Float?
+    let currency: String
+    let trackTimeMillis: Int?
+    let collectionName: String?
+    
+}
+```
