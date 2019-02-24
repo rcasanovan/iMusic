@@ -177,6 +177,18 @@ extension SearchListViewController {
             static let height: CGFloat = 17.0
         }
         
+        struct SortButton {
+            static let leading: CGFloat = 5.0
+            static let trailing: CGFloat = 16.0
+            static let width: CGFloat = 80.0
+            static let top: CGFloat = 7.5
+            static let height: CGFloat = 31.0
+        }
+        
+        struct SearchListContainerView {
+            static let top: CGFloat = 10.0
+        }
+        
     }
     
     /**
@@ -205,13 +217,13 @@ extension SearchListViewController {
         searchListContainerView.addConstraintsWithFormat("H:|[v0]|", views: noResultsLabel)
         searchListContainerView.addConstraintsWithFormat("V:[v0(\(Layout.NoResultsLabel.height))]", views: noResultsLabel)
         
-        view.addConstraintsWithFormat("H:|[v0]-5.0-[v1(80.0)]-16.0-|", views: searchView, sortButton)
+        view.addConstraintsWithFormat("H:|[v0]-\(Layout.SortButton.leading)-[v1(\(Layout.SortButton.width))]-\(Layout.SortButton.trailing)-|", views: searchView, sortButton)
         view.addConstraintsWithFormat("V:|[v0(\(searchView.height))]", views: searchView)
         
-        view.addConstraintsWithFormat("V:|-7.5-[v0(31.0)]", views: sortButton)
+        view.addConstraintsWithFormat("V:|-\(Layout.SortButton.top)-[v0(\(Layout.SortButton.height))]", views: sortButton)
         
         view.addConstraintsWithFormat("H:|[v0]|", views: searchListContainerView)
-        view.addConstraintsWithFormat("V:[v0]-10.0-[v1]|", views: searchView, searchListContainerView)
+        view.addConstraintsWithFormat("V:[v0]-\(Layout.SearchListContainerView.top)-[v1]|", views: searchView, searchListContainerView)
         
         if let searchListCollectionView = searchListCollectionView {
             searchListContainerView.addSubview(searchListCollectionView)
