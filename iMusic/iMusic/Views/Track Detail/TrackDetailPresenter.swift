@@ -66,4 +66,17 @@ extension TrackDetailPresenter: TrackDetailPresenterDelegate {
         interactor.prevTrack()
     }
     
+    func sharePressed() {
+        guard let view = view as? UIViewController, let currentTrack = interactor.getCurrentTrack() else {
+            return
+        }
+        var items: [Any] = ["Hey! I'm listening \(currentTrack.trackName) by \(currentTrack.artistName) using the iTunes API"]
+        
+        if let previewUrl = currentTrack.previewUrl {
+            items.append("\(previewUrl.absoluteString)")
+        }
+        
+        ShareManager.shared.share(items, from: view)
+    }
+    
 }

@@ -75,6 +75,8 @@
 		C86CB7432222B1D30029D757 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7422222B1D30029D757 /* UIImage.swift */; };
 		C86CB7452222B4E60029D757 /* PlayerTrackDuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7442222B4E60029D757 /* PlayerTrackDuration.swift */; };
 		C86CB7482222BD990029D757 /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB7472222BD990029D757 /* PlayerManager.swift */; };
+		C86CB74B2222D0FA0029D757 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB74A2222D0FA0029D757 /* ShareView.swift */; };
+		C86CB74E2222D1A80029D757 /* ShareManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86CB74D2222D1A80029D757 /* ShareManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +167,8 @@
 		C86CB7422222B1D30029D757 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		C86CB7442222B4E60029D757 /* PlayerTrackDuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTrackDuration.swift; sourceTree = "<group>"; };
 		C86CB7472222BD990029D757 /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		C86CB74A2222D0FA0029D757 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
+		C86CB74D2222D1A80029D757 /* ShareManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareManager.swift; sourceTree = "<group>"; };
 		F1BF6098B5FC59ED6AC563F7 /* Pods-iMusicTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMusicTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iMusicTests/Pods-iMusicTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +265,7 @@
 		C86CB69B2221EE140029D757 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB74C2222D19C0029D757 /* Share Manager */,
 				C86CB7462222BD880029D757 /* Player Manager */,
 				C86CB72E222202150029D757 /* Track Manager */,
 				C86CB6DA2221F1750029D757 /* Search Suggestions Manager */,
@@ -451,6 +456,7 @@
 		C86CB6EB2221F3480029D757 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C86CB7492222D0EE0029D757 /* Share View */,
 				C86CB7042221F4C10029D757 /* Search View */,
 				C86CB6FC2221F44C0029D757 /* Custom Title View */,
 				C86CB6F12221F3E10029D757 /* Suggestions View */,
@@ -643,6 +649,22 @@
 				C86CB7472222BD990029D757 /* PlayerManager.swift */,
 			);
 			path = "Player Manager";
+			sourceTree = "<group>";
+		};
+		C86CB7492222D0EE0029D757 /* Share View */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB74A2222D0FA0029D757 /* ShareView.swift */,
+			);
+			path = "Share View";
+			sourceTree = "<group>";
+		};
+		C86CB74C2222D19C0029D757 /* Share Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C86CB74D2222D1A80029D757 /* ShareManager.swift */,
+			);
+			path = "Share Manager";
 			sourceTree = "<group>";
 		};
 		FA616C2B4FC51036E47DED90 /* Pods */ = {
@@ -881,6 +903,7 @@
 				C86CB6F02221F3BC0029D757 /* BaseViewController.swift in Sources */,
 				C86CB6A42221EEF90029D757 /* ReachabilityManager.swift in Sources */,
 				C86CB73A2222A3AF0029D757 /* TrackDetailPresenter.swift in Sources */,
+				C86CB74E2222D1A80029D757 /* ShareManager.swift in Sources */,
 				C86CB7382222A3AF0029D757 /* TrackDetailRouter.swift in Sources */,
 				C86CB7152221F67E0029D757 /* TrackHeaderView.swift in Sources */,
 				C86CB7292221F7DD0029D757 /* SearchListDatasource.swift in Sources */,
@@ -920,6 +943,7 @@
 				C86CB6792221EC430029D757 /* AppDelegate.swift in Sources */,
 				C86CB70C2221F51A0029D757 /* UIFont.swift in Sources */,
 				C86CB72C2221F7DD0029D757 /* SearchListViewController.swift in Sources */,
+				C86CB74B2222D0FA0029D757 /* ShareView.swift in Sources */,
 				C86CB6BE2221EFD80029D757 /* TracksRequest.swift in Sources */,
 				C86CB6FA2221F3F90029D757 /* SuggestionsDatasource.swift in Sources */,
 				C86CB6DF2221F1A00029D757 /* SearchSuggestion.swift in Sources */,

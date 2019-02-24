@@ -21,6 +21,7 @@ protocol TrackDetailPresenterDelegate : class {
     func pausePressed()
     func nextPressed()
     func prevPressed()
+    func sharePressed()
 }
 
 // Presenter / Interactor
@@ -29,6 +30,7 @@ protocol TrackDetailInteractorDelegate : class {
     func pauseTrack()
     func nextTrack()
     func prevTrack()
+    func getCurrentTrack() -> TrackViewModel?
 }
 
 // Presenter / Router

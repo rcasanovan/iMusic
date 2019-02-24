@@ -10,7 +10,7 @@ import Foundation
 
 class TrackDetailInteractor {
     
-    private var track: TrackViewModel
+    private var track: TrackViewModel?
     
     init(track: TrackViewModel) {
         self.track = track
@@ -36,6 +36,10 @@ extension TrackDetailInteractor: TrackDetailInteractorDelegate {
     
     func prevTrack() {
         PlayerManager.shared.pause()
+    }
+    
+    func getCurrentTrack() -> TrackViewModel? {
+        return track
     }
     
 }

@@ -12,6 +12,7 @@ class TrackDetailViewController: BaseViewController {
     
     public var presenter: TrackDetailPresenterDelegate?
     
+    private let shareView: ShareView = ShareView()
     private let artworkImageView: UIImageView = UIImageView()
     private let trackNameLabel: UILabel = UILabel()
     private let artistNameLabel: UILabel = UILabel()
@@ -48,6 +49,9 @@ extension TrackDetailViewController {
      * Configure subviews
      */
     private func configureSubviews() {
+        shareView.delegate = self
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: shareView)
+        
         artworkImageView.frame = CGRect(x: 0.0, y: 0.0, width: 250.0, height: 250.0)
         
         trackNameLabel.font = UIFont.mediumWithSize(size: 18.0)
@@ -108,6 +112,15 @@ extension TrackDetailViewController {
             return
         }
         artworkImageView.hnk_setImage(from: url, placeholder: nil)
+    }
+    
+}
+
+// MARK: - ShareViewDelegate
+extension TrackDetailViewController: ShareViewDelegate {
+    
+    func shareViewPressed() {
+        presenter?.sharePressed()
     }
     
 }
