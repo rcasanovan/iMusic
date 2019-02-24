@@ -153,3 +153,59 @@ Used to process the songs from iTunes API.
 Used to share the current track using UIActivityViewController.
 
 ## How it looks like?
+
+### Track list && search
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/01.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/02.png?raw=true)
+
+### Track detail
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/04.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/05.png?raw=true)
+
+### No internet connection screen && No results
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/10.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/03.png?raw=true)
+
+## Little image trick
+
+The API response has 3 different sizes for artists / tracks:
+
+* 30x30 px
+* 60X60 px
+* 100x100 px
+
+In this case if we're using the max size for images the result is not the best. I did some test related with this point and I noticed that the API is able to respond other sizes too. In this case I decided to use a 200x200 px. I know this is not the best option but I think this can create a better UX for the user.
+
+### 100x100 px vs 200x200 px
+
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/11.png?raw=true)
+![alt tag](https://github.com/rcasanovan/iMusic/blob/master/Images/12.png?raw=true)
+
+## What's left in the demo?
+
+* Realm migration process: It would be nice to add a process to migrate the realm database to a new model (just in case you need to add a new field into the database).
+* Localizable strings files: I didn't add localizable strings files.
+* Update the managers: I implemented the managers using singletons. The best option should be to remove the singletons in order to use dependency injections (to improve the testing).
+
+## Programming languages && Development tools
+
+* Swift 4.2
+* Xcode 10.1
+* [Cocoapods](https://cocoapods.org) 1.5.3
+* Minimun iOS version: 11.0
+
+## Third-Party Libraries
+
+* [RealmSwift](https://github.com/realm/realm-cocoa) (3.13.1): A mobile database that runs directly inside phones, tablets or wearables.
+* [SVProgressHUD](https://github.com/SVProgressHUD/SVProgressHUD) (2.2.5): A clean and lightweight progress HUD for your iOS and tvOS app.
+* [Haneke](https://github.com/Haneke/Haneke) (1.0): A lightweight zero-config image cache for iOS, in Objective-C.
+
+## Support && contact
+
+### Email
+
+You can contact me using my email: ricardo.casanova@outlook.com
+
+### Twitter
+
+Follow me [@rcasanovan](http://twitter.com/rcasanovan) on twitter.
