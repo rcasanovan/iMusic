@@ -104,6 +104,34 @@ extension TrackCollectionViewCell {
         struct ReleaseDateLabel {
             static let width: CGFloat = 40.0
             static let trailing: CGFloat = 5.0
+            static let top: CGFloat = 5.0
+            static let height: CGFloat = 16.0
+        }
+        
+        struct ArtistNameLabel {
+            static let top: CGFloat = 10.0
+            static let height: CGFloat = 16.0
+        }
+        
+        struct CollectionNameLabel {
+            static let top: CGFloat = 5.0
+            static let height: CGFloat = 16.0
+        }
+        
+        struct TrackNameLabel {
+            static let top: CGFloat = 5.0
+            static let height: CGFloat = 16.0
+        }
+        
+        struct TrackInformationLabel {
+            static let top: CGFloat = 5.0
+            static let height: CGFloat = 16.0
+            static let bottom: CGFloat = 10.0
+        }
+        
+        struct GenreLabel {
+            static let top: CGFloat = 5.0
+            static let height: CGFloat = 16.0
         }
         
     }
@@ -161,24 +189,24 @@ extension TrackCollectionViewCell {
         addSubview(genreLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: trackImageView)
-        addConstraintsWithFormat("V:|[v0]-10.0-[v1]", views: trackImageView, artistNameLabel)
+        addConstraintsWithFormat("V:|[v0]-\(Layout.ArtistNameLabel.top)-[v1]", views: trackImageView, artistNameLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: artistNameLabel)
-        addConstraintsWithFormat("V:[v0(16.0)]-5.0-[v1]", views: artistNameLabel, collectionNameLabel)
+        addConstraintsWithFormat("V:[v0(\(Layout.ArtistNameLabel.height))]-\(Layout.CollectionNameLabel.top)-[v1]", views: artistNameLabel, collectionNameLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: collectionNameLabel)
-        addConstraintsWithFormat("V:[v0(16.0)]-5.0-[v1]", views: collectionNameLabel, trackNameLabel)
+        addConstraintsWithFormat("V:[v0(\(Layout.CollectionNameLabel.height))]-\(Layout.TrackNameLabel.top)-[v1]", views: collectionNameLabel, trackNameLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: trackNameLabel)
-        addConstraintsWithFormat("V:[v0(16.0)]-5.0-[v1]", views: trackNameLabel, releaseDateLabel)
+        addConstraintsWithFormat("V:[v0(\(Layout.TrackNameLabel.height))]-\(Layout.ReleaseDateLabel.top)-[v1]", views: trackNameLabel, releaseDateLabel)
         
         addConstraintsWithFormat("H:|[v0(\(Layout.ReleaseDateLabel.width))]-\(Layout.ReleaseDateLabel.trailing)-[v1]|", views: releaseDateLabel, genreLabel)
-        addConstraintsWithFormat("V:[v0(16.0)]-5.0-[v1]", views: releaseDateLabel, trackInformationLabel)
+        addConstraintsWithFormat("V:[v0(\(Layout.ReleaseDateLabel.height))]-\(Layout.TrackInformationLabel.top)-[v1]", views: releaseDateLabel, trackInformationLabel)
         
-        addConstraintsWithFormat("V:[v0]-5.0-[v1(16.0)]-5.0-[v2]", views: trackNameLabel, genreLabel, trackInformationLabel)
+        addConstraintsWithFormat("V:[v0]-\(Layout.GenreLabel.top)-[v1(\(Layout.GenreLabel.height))]-\(Layout.TrackInformationLabel.top)-[v2]", views: trackNameLabel, genreLabel, trackInformationLabel)
         
         addConstraintsWithFormat("H:|[v0]|", views: trackInformationLabel)
-        addConstraintsWithFormat("V:[v0(16.0)]-10.0-|", views: trackInformationLabel)
+        addConstraintsWithFormat("V:[v0(\(Layout.TrackInformationLabel.height))]-\(Layout.TrackInformationLabel.bottom)-|", views: trackInformationLabel)
     }
     
 }
