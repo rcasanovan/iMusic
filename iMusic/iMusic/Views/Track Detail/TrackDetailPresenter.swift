@@ -60,10 +60,14 @@ extension TrackDetailPresenter: TrackDetailPresenterDelegate {
     
     func nextPressed() {
         interactor.nextTrack()
+        guard let currentTrack = interactor.getCurrentTrack() else { return }
+        view?.loadTrack(currentTrack)
     }
     
     func prevPressed() {
         interactor.prevTrack()
+        guard let currentTrack = interactor.getCurrentTrack() else { return }
+        view?.loadTrack(currentTrack)
     }
     
     func sharePressed() {

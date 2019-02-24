@@ -192,16 +192,16 @@ extension SearchListInteractor: SearchListInteractorDelegate {
         switch sortType {
         case .artistName:
             dictionary = Dictionary(grouping: tracksViewModel, by: { $0.artistName })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.artistName > $1.artistName })
+            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.artistName < $1.artistName })
         case .genre:
             dictionary = Dictionary(grouping: tracksViewModel, by: { $0.primaryGenreName })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.primaryGenreName > $1.primaryGenreName })
+            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.primaryGenreName < $1.primaryGenreName })
         case .length:
             dictionary = Dictionary(grouping: tracksViewModel, by: { $0.trackDuration })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackDuration > $1.trackDuration })
+            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackDuration < $1.trackDuration })
         case .price:
             dictionary = Dictionary(grouping: tracksViewModel, by: { $0.trackPrice ?? "" })
-            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackPrice ?? "" > $1.trackPrice ?? "" })
+            tracks = dictionary.map{ $0.value }.flatMap{ $0 }.sorted(by: { $0.trackPrice ?? "" < $1.trackPrice ?? "" })
         }
         
         return tracks

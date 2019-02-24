@@ -11,7 +11,7 @@ import Foundation
 class TrackDetailInteractor {
     
     private var track: TrackViewModel?
-    private var allTracks: [TrackViewModel]?
+    private var allTracks: [TrackViewModel]
     
     init(track: TrackViewModel, allTracks: [TrackViewModel]) {
         self.track = track
@@ -33,11 +33,31 @@ extension TrackDetailInteractor: TrackDetailInteractorDelegate {
     }
     
     func nextTrack() {
-        PlayerManager.shared.pause()
+        guard let track = track else { return }
+        
+        let currentTrackIndex = allTracks.index{ $0.trackId == track.trackId }
+        guard let index = currentTrackIndex else { return }
+        
+        let nextTrackIndex = index + 1
+        if !allTracks.indices.contains(nextTrackIndex) { return }
+        
+        self.track = allTracks[nextTrackIndex]
+        PlayerManager.shared.prepare(with: self.track?.previewUrl)
+        PlayerManager.shared.play()
     }
     
     func prevTrack() {
-        PlayerManager.shared.pause()
+        guard let track = track else { return }
+        
+        let currentTrackIndex = allTracks.index{ $0.trackId == track.trackId }
+        guard let index = currentTrackIndex else { return }
+        
+        let prevTrackIndex = index - 1
+        if !allTracks.indices.contains(prevTrackIndex) { return }
+        
+        self.track = allTracks[prevTrackIndex]
+        PlayerManager.shared.prepare(with: self.track?.previewUrl)
+        PlayerManager.shared.play()
     }
     
     func getCurrentTrack() -> TrackViewModel? {
